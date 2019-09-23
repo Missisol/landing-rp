@@ -1,0 +1,100 @@
+@import '../variables';
+
+.headerPartners {
+  width: 100%;
+  position: fixed;
+  background: #FFFAF7;
+  box-shadow: 0 5px 35px rgba(0, 0, 0, 0.2);
+
+  &__wrap {
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__menuWrap {
+    display: flex;
+    flex: 1;
+    justify-content: space-between;
+    padding: 0 124px;
+  }
+
+  &__link {
+    display: block;
+    color: $colorText;
+  }
+
+  &__phone {
+    text-align: center;
+  }
+
+  &__icon,
+  &__icon::before,
+  &__icon::after {
+    position: absolute;
+    width: 7px;
+    height: 7px;
+    background: $colorText;
+  }
+
+  &__icon::before,
+  &__icon::after {
+    content: '';
+    display: block;
+    transition: 0.2s;
+  }
+
+  &__icon::before {
+    transform: translateY(-9px);
+  }
+
+  &__icon::after {
+    transform: translateY(9px);
+  }
+}
+
+@include desktop() {
+  .headerPartners {
+    height: 60px;
+
+    &__wrap {
+      max-width: $widthFullDesktopPartners;
+    }
+
+    &__phone {
+      width: 223px;
+      height: 100%;
+      line-height: 60px;
+      background: $colorBackgroundLightGrey;
+    }
+
+    &__icon {
+      display: none;
+    }
+  }
+}
+
+@include tablet() {
+  .headerPartners {
+    width: 100%;
+    height: 60px;
+
+    &__wrap {
+      max-width: 726px;
+    }
+
+    &__menuWrap {
+      display: none;
+    }
+  }
+}
+
+@include phone() {
+  .headerPartners {
+    width: 100%;
+    height: 42px;
+  }
+
+}
