@@ -1,8 +1,11 @@
 @import "../variables";
 
 .programWrap {
-  height: 550px;
   background: $colorBackgroundLightMilk;
+}
+
+@include desktop() {
+  height: 550px;
 }
 
 .program {
