@@ -1,0 +1,89 @@
+@import '../variables';
+
+.offersWrap {
+  background: $colorBackgroundLightBrown;
+  box-shadow: 0 5px 35px rgba(0, 0, 0, 0.2);
+  height: 1188px;
+}
+
+.offers {
+  position: relative;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+
+  &__blockLeft,
+  &__blockRight {
+    width: 50%;
+  }
+}
+
+@include desktop() {
+  .offers {
+    //max-width: $widthFullDesktop;
+    //padding-top: 62px;
+
+    &__blockLeft {
+      padding-top: 80px;
+    }
+
+    &__card {
+      width: 588px;
+      height: 355px;
+      display: flex;
+      padding: 17px;
+      background: $colorBackgroundLightMilk;
+      margin-top: 64px;
+      font-size: 16px;
+
+      &_right {
+        margin-left: 142px;
+      }
+    }
+
+    &__text {
+      font-size: 20px;
+      line-height: 30px;
+      margin-top: 100px;
+
+      &_left {
+        margin-left: 243px;
+      }
+
+      &_right {
+        margin-right: 250px;
+      }
+    }
+
+    &__textBlock {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 0 25px;
+    }
+
+    &__cardText {
+      font-size: 16px;
+    }
+
+    &__cardLink {
+      color: $colorTextLight;
+      font-size: 16px;
+    }
+
+    &__button {
+      position: absolute;
+      @include button(200px, 45px, $colorButtonLightGreen);
+      top: 92%;
+      left: 243px;
+    }
+  }
+}
+
+@include tablet() {
+
+}
+
+@include phone() {
+
+}

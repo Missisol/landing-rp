@@ -31,6 +31,9 @@ $base-font-family: 'Roboto', sans-serif;
 
 // The font sizes for h1-h6.
 $h1-font-size: 36px;
+$h2-font-size: 24px;
+$h3-font-size: 18px;
+$h4-font-size: 16px;
 
 //$h1-font-size: 2    * $base-font-size !default;
 //$h2-font-size: 1.5  * $base-font-size !default;
@@ -51,15 +54,15 @@ $normalize-vertical-rhythm: false !default;
 
 // Customer settings
 
-$widthFullDesktopPartners: 1440px;
-$widthFullTabletPartners: 768px;
-$widthFullPhonePartners: 375px;
+$widthFullDesktop: 1440px;
+$widthFullTablet: 768px;
+$widthFullPhone: 375px;
 
-$widthContainerDesktopPartners: 1196px;
-$widthContainerTabletPartners: 700px;
-$widthContainerPhonePartners: 328px;
+$widthContainerDesktop: 1196px;
+$widthContainerTablet: 700px;
+$widthContainerPhone: 328px;
 
-$colorBackgroundLightGreen: #D4E2E3;
+$colorBackgroundLightBlue: #D4E2E3;
 $colorBackgroundLightBrown: #E6E1DF;
 $colorBackgroundLightGrey: #E1E1E3;
 $colorBackgroundLightMilk: #FFFAF7;
@@ -67,23 +70,56 @@ $colorButtonLightGreen: #B9D3DA;
 $colorButtonDarkGreen: #4B8290;
 $colorButtonDarkGrey: #707070;
 $colorText: #6C6C6C;
+$colorTextLight: #9C9C9C;
+$colorTextWhite: #ffffff;
+$colorLightTitle: rgba(175, 175, 175, 0.3);
+$colorBorder: #C5C5C5;
 
 
 @mixin phone {
-  @media screen and (min-width: $widthFullPhonePartners - 1px) and (max-width: $widthFullTabletPartners - 1) {
+  @media screen and (min-width: $widthFullPhone - 1px) and (max-width: $widthFullTablet - 1) {
     @content;
   }
 }
 
 @mixin tablet {
-  @media screen and (min-width: $widthFullTabletPartners) and (max-width: $widthFullDesktopPartners - 1px) {
+  @media screen and (min-width: $widthFullTablet) and (max-width: $widthFullDesktop - 1px) {
     @content;
   }
 }
 
 @mixin desktop {
-  @media screen and (min-width: $widthFullDesktopPartners) {
+  @media screen and (min-width: $widthFullDesktop) {
     @content;
   }
 }
 
+@mixin button($btn-width, $btn-height, $btn-color) {
+
+  width: $btn-width;
+  height: $btn-height;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+  background: $btn-color;
+  font-size: 18px;
+  text-align: center;
+  line-height: $btn-height;
+  color: $colorText;
+
+  &:hover {
+    box-shadow: none;
+  }
+
+  &:active {
+  @include btn-color($btn-color);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+    color: $colorTextWhite;
+  }
+}
+
+@mixin btn-color($btn-color) {
+  @if $btn-color == $colorBackgroundLightMilk {
+    background: $colorButtonDarkGrey;
+  } @else {
+    background: $colorButtonDarkGreen;
+  }
+}

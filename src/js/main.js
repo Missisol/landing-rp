@@ -2,9 +2,9 @@
 
 const element = document.querySelector('#phone');
 
-const phoneMask = IMask(element, {
-    mask: '+{7}(000)000-00-00',
-});
+// const phoneMask = IMask(element, {
+//     mask: '+{7}(000)000-00-00',
+// });
 
 
 class SubmitForm {
@@ -176,5 +176,5 @@ const formSelector = '.connection__form';
 const btnSubmitSelector = '.connection__submit';
 
 const send = new SubmitForm(api, inputs, formSelector, btnSubmitSelector);
-send.init();
+// send.init();
 

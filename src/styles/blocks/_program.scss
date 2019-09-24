@@ -1,0 +1,122 @@
+@import "../variables";
+
+.programWrap {
+  height: 550px;
+  background: $colorBackgroundLightMilk;
+}
+
+.program {
+  height: 100%;
+  display: flex;
+
+  &__image {
+    background-size: cover;
+  }
+
+  &__formWrap {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__formTitle {
+    margin-bottom: 60px;
+  }
+
+  &__formSubtitle {
+    margin-bottom: 30px;
+  }
+
+  &__input {
+    background: $colorBackgroundLightMilk;
+    outline: none;
+    border: none;
+
+    &_checkboxInput {
+      display: none;
+    }
+  }
+
+  &__input,
+  &__checkboxLabel {
+    font-size: 16px;
+    font-weight: 300;
+    color: $colorTextLight;
+  }
+
+  &__input::placeholder {
+    font-size: 16px;
+    color: $colorTextLight;
+  }
+
+  &__label {
+    border-bottom: 1px solid $colorBorder;
+  }
+
+  &__label,
+  &__checkboxLabel {
+    margin-bottom: 34px;
+  }
+
+  &__checkboxLabel {
+    position: relative;
+    margin-left: 41px;
+    display: inline-block;
+  }
+
+  &__checkboxLabel:before {
+    content: '';
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    border: 1px solid $colorBorder;
+    left: -41px;
+  }
+
+  &__submit {
+    border: none;
+  }
+}
+
+.program__input_checkboxInput:checked + label.program__checkboxLabel:before {
+  content: '\2713';
+  font-size: 20px;
+  text-align: center;
+  color: $colorTextLight;
+}
+
+
+@include desktop() {
+  .program {
+
+    &__image {
+      flex-basis: 365px;
+      background: url(../assets/images/program/form.jpg) no-repeat;
+    }
+
+    &__formWrap {
+      padding: 57px 43px;
+    }
+
+    &__formTitle {
+      margin-bottom: 60px;
+    }
+
+    &__formSubtitle {
+      margin-bottom: 30px;
+    }
+
+    &__label {
+      width: 427px;
+    }
+
+    &__submit {
+      @include button(200px, 45px, $colorButtonLightGreen)
+    }
+  }
+}
+

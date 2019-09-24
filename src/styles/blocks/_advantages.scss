@@ -1,0 +1,62 @@
+@import '../variables';
+
+.advantagesWrap {
+  background: $colorBackgroundLightGrey;
+  box-shadow: inset 0 5px 35px rgba(0, 0, 0, 0.2);
+  height: 595px;
+}
+
+.advantages {
+  position: relative;
+  display: flex;
+
+  &__cardsWrap {
+    display: flex;
+    flex-wrap: wrap;
+    background: $colorBackgroundLightMilk;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  }
+}
+
+@include desktop() {
+  .advantages {
+    justify-content: center;
+    align-items: center;
+    padding: 120px 0;
+
+    &__card {
+      width: 398px;
+      height: 355px;
+      padding: 80px 44px;
+    }
+
+    &__card:nth-child(2) {
+      box-shadow: 0 0 30px rgba(0, 0, 0, 0.25);
+    }
+
+    &__cardTitle {
+      margin-bottom: 40px;
+    }
+
+    &__title {
+      position: absolute;
+      right: -210px;
+      transform: rotate(-90deg);
+      color: $colorLightTitle;
+      filter: blur(3px);
+    }
+  }
+}
+
+@include tablet() {
+  .advantages {
+
+
+  }
+}
+
+@include phone() {
+  .advantages {
+
+  }
+}

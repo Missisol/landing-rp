@@ -1,12 +1,14 @@
 @import '../variables';
 
-.headerPartners {
+.header {
   width: 100%;
   position: fixed;
-  background: #FFFAF7;
+  z-index: 100;
+  background: $colorBackgroundLightMilk;
   box-shadow: 0 5px 35px rgba(0, 0, 0, 0.2);
 
   &__wrap {
+    position: relative;
     height: 100%;
     margin: 0 auto;
     display: flex;
@@ -28,6 +30,10 @@
 
   &__phone {
     text-align: center;
+  }
+
+  &__sideMenuWrap {
+    position: absolute;
   }
 
   &__icon,
@@ -56,11 +62,16 @@
 }
 
 @include desktop() {
-  .headerPartners {
+  .header {
     height: 60px;
 
     &__wrap {
-      max-width: $widthFullDesktopPartners;
+      max-width: $widthFullDesktop;
+      font-size: 16px;
+    }
+
+    &__logo {
+      margin-left: 19px;
     }
 
     &__phone {
@@ -77,22 +88,30 @@
 }
 
 @include tablet() {
-  .headerPartners {
+  .header {
     width: 100%;
     height: 60px;
 
     &__wrap {
-      max-width: 726px;
+      max-width: 676px;
     }
 
     &__menuWrap {
       display: none;
     }
+
+    &__phone {
+      font-size: 20px;
+    }
+
+    &__icon {
+      left: 726px;
+    }
   }
 }
 
 @include phone() {
-  .headerPartners {
+  .header {
     width: 100%;
     height: 42px;
   }
