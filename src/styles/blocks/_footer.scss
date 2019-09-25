@@ -170,7 +170,10 @@
       width: 360px;
       height: 136px;
       margin: 11px 0 30px;
-      padding-top: 100px;
+    }
+
+    &__textarea::placeholder {
+      padding-top: 107px;
     }
   }
 }
