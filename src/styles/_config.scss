@@ -71,7 +71,8 @@ h6 {
 }
 
 @include tablet() {
-  .container {
+  .container,
+  .container-min {
     width: $widthFullTablet;
   }
 }

@@ -7,16 +7,11 @@
   box-shadow: 0 0 35px rgba(0, 0, 0, 0.2);
 }
 
-@include desktop() {
-  .galleryWrap {
-    height: 1136px;
-  }
-}
-
 .gallery {
   position: relative;
   height: 100%;
   display: flex;
+  flex-direction: column;
 
   &__buttonWrap {
     display: flex;
@@ -30,9 +25,12 @@
 }
 
 @include desktop() {
+  .galleryWrap {
+    height: 1136px;
+  }
+
   .gallery {
     padding: 121px 197px;
-    flex-direction: column;
     justify-content: space-between;
 
     &__wrap {
@@ -40,6 +38,11 @@
       flex-wrap: wrap;
       justify-content: space-between;
       height: 819px;
+      margin-bottom: 26px;
+
+      &_tablet {
+        display: none;
+      }
     }
 
     &__image {
@@ -57,8 +60,52 @@
 
     &__decorativeTitle {
       @include decorativeTitle;
-      right: -28px;
       top: 530px;
+      right: -33px;
+    }
+  }
+}
+
+@include tablet() {
+  .galleryWrap {
+    height: 959px;
+  }
+
+  .gallery {
+    padding: 85px 66px 43px;
+
+    &__wrap {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+
+      &_desktop {
+        display: none;
+      }
+    }
+
+    &__image {
+      margin-bottom: 15px;
+    }
+
+    &__buttonWrap {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &__buttonInstagram {
+      @include button(200px, 45px, $colorBackgroundLightMilk);
+      margin-bottom: 25px;
+    }
+
+    &__buttonCatalog {
+      @include button(200px, 45px, $colorButtonLightGreen);
+    }
+
+    &__decorativeTitle {
+      @include decorativeTitleTablet;
+      top: 16px;
+      left: 510px;
     }
   }
 }

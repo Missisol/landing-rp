@@ -135,3 +135,9 @@ $colorBorder: #C5C5C5;
   color: rgba(175, 175, 175, 0.3);
   filter: blur(1px);
 }
+
+@mixin decorativeTitleTablet {
+  position: absolute;
+  color: rgba(175, 175, 175, 0.3);
+  filter: blur(1px);
+}

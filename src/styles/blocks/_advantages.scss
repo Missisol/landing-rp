@@ -1,31 +1,41 @@
 @import '../variables';
 
 .advantagesWrap {
+  position: relative;
   background: $colorBackgroundLightGrey;
   box-shadow: inset 0 5px 35px rgba(0, 0, 0, 0.2);
-}
-
-@include desktop() {
-  height: 595px;
 }
 
 .advantages {
   position: relative;
   display: flex;
 
-  &__cardsWrap {
+  &__cardWrap {
     display: flex;
-    flex-wrap: wrap;
-    background: $colorBackgroundLightMilk;
-    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
   }
 }
 
 @include desktop() {
+  .advantagesWrap {
+    height: 595px;
+  }
+
   .advantages {
     justify-content: center;
     align-items: center;
     padding: 120px 0;
+
+    &__cardWrapTablet,
+    &__card_tablet,
+    &__linkCatalog {
+      display: none;
+    }
+
+    &__cardWrap {
+      flex-wrap: wrap;
+      background: $colorBackgroundLightMilk;
+      box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    }
 
     &__card {
       width: 398px;
@@ -43,15 +53,62 @@
 
     &__decorativeTitle {
       @include decorativeTitle;
-      right: -210px;
+      right: -91px;
+      top: 260px;
     }
   }
 }
 
 @include tablet() {
+  .advantagesWrap {
+    height: 1024px;
+  }
+
   .advantages {
+    height: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 24px;
+    background: url(../assets/images/advantages/back-t.jpg) 0 100% no-repeat;
+    background-size: contain;
 
+    &__cardWrap_desktop {
+      display: none;
+    }
 
+    &__cardWrapTablet {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    &__card {
+      width: 350px;
+      height: 330px;
+      padding: 32px 34px 27px;
+      background: $colorBackgroundLightMilk;
+      box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+      margin-bottom: 20px;
+
+      &_tablet {
+        margin-bottom: 30px;
+      }
+    }
+
+    &__cardTitle {
+      margin-bottom: 27px;
+    }
+
+    &__linkCatalog {
+      color: #ffffff;
+    }
+
+    &__decorativeTitle {
+      @include decorativeTitleTablet;
+      left: 456px;
+      top: 40px;
+    }
   }
 }
 

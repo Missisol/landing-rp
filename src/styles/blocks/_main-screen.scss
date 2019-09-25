@@ -177,7 +177,8 @@
 
     &__contentRight {
       max-width: 211px;
-      padding-top: 200px;
+      top: 286px;
+      left: 20px;
     }
 
     &__button {
@@ -205,7 +206,7 @@
     }
 
     &__nav {
-      max-width: 900px;
+      max-width: 700px;
       height: 100%;
       margin: 0 auto;
       display: flex;
@@ -215,7 +216,7 @@
 
     &__image {
       right: 0;
-      top: 42px;
+      top: 176px;
       background: url(../assets/images/main-screen/lamp-t.png) no-repeat;
       background-size: cover;
       width: 328px;
