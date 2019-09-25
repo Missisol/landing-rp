@@ -2,11 +2,17 @@
 
 .main {
   position: relative;
+  background: $colorBackgroundLightBlue;
 
   &__content {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
     margin: 0 auto;
+  }
+
+  &__wrap {
+    display: flex;
+    justify-content: space-between;
   }
 
   &__image {
@@ -18,6 +24,14 @@
     font-weight: 400;
   }
 
+  &__text {
+    font-size: 20px;
+  }
+
+  &__contentRight {
+    position: absolute;
+  }
+
   &__textSmallWrap {
     display: flex;
     flex-direction: column;
@@ -27,6 +41,10 @@
   }
 
   &__textSmall {
+
+    &_subtitle {
+      font-size: 18px;
+    }
 
     &_light {
       color: $colorTextLight;
@@ -46,13 +64,16 @@
 @include desktop() {
   .main {
     height: 829px;
-    margin-top: 60px;
-    background: $colorBackgroundLightBlue;
+    margin-top: $heightHeaderDesktop;
 
     &__content {
-      max-width: 1196px;
+      max-width: $widthContainerDesktop;
       height: 711px;
       padding: 137px 134px 127px 0;
+    }
+
+    &__title {
+      max-width: 70%;
     }
 
     &__contentLeft {
@@ -75,8 +96,8 @@
     }
 
     &__contentRight {
+      top: 241px;
       max-width: 211px;
-      padding-top: 182px;
     }
 
     &__button {
@@ -109,13 +130,97 @@
     &__image {
       right: 0;
       top: 77px;
+      background: url(../assets/images/main-screen/lamp.png) no-repeat;
+      background-size: cover;
+      width: 468px;
+      height: 753px;
     }
   }
 }
 
 @include tablet() {
   .main {
+    height: 964px;
+    margin-top: $heightHeaderDesktop;
 
+    &__content {
+      max-width: 676px;
+      height: 846px;
+      padding: 100px 0 105px;
+    }
+
+    &__wrap {
+      padding-right: 50px;
+    }
+
+    &__title {
+      margin-bottom: 55px;
+    }
+
+    &__contentLeft {
+      max-width: 846px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    &__textWrap {
+      max-width: 348px;
+    }
+
+    &__text {
+      line-height: 30px;
+
+      &_first {
+        margin-bottom: 30px;
+      }
+    }
+
+    &__contentRight {
+      max-width: 211px;
+      padding-top: 200px;
+    }
+
+    &__button {
+      @include button(217px, 50px, $colorBackgroundLightMilk);
+      margin-top: 67px;
+    }
+
+    &__innerTextWrap {
+      margin-bottom: 20px;
+    }
+
+    &__textSmall {
+      margin-bottom: 19px;
+      line-height: 19px;
+
+      &_subtitle {
+        line-height: 21px;
+      }
+    }
+
+    &__navWrap {
+      height: 118px;
+      background: $colorBackgroundLightMilk;
+      box-shadow: 0 5px 35px rgba(0, 0, 0, 0.2);
+    }
+
+    &__nav {
+      max-width: 900px;
+      height: 100%;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    &__image {
+      right: 0;
+      top: 42px;
+      background: url(../assets/images/main-screen/lamp-t.png) no-repeat;
+      background-size: cover;
+      width: 328px;
+      height: 788px;
+    }
   }
 }
 

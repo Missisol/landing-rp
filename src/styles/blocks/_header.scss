@@ -56,11 +56,11 @@
   }
 
   &__icon::before {
-    transform: translateY(-9px);
+    transform: translateY(-12px);
   }
 
   &__icon::after {
-    transform: translateY(9px);
+    transform: translateY(12px);
   }
 }
 
@@ -72,10 +72,6 @@
     &__wrap {
       max-width: $widthFullDesktop;
       font-size: 16px;
-    }
-
-    &__logo {
-      margin-left: 19px;
     }
 
     &__link {
@@ -115,10 +111,12 @@
 
     &__phone {
       font-size: 20px;
+      margin-right: 65px;
     }
 
     &__icon {
-      left: 726px;
+      left: 666px;
+      top: -3px;
     }
   }
 }

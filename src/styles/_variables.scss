@@ -128,3 +128,11 @@ $colorBorder: #C5C5C5;
     background: $colorButtonDarkGreen;
   }
 }
+
+@mixin decorativeTitle {
+  position: absolute;
+  transform: rotate(-90deg);
+  color: rgba(175, 175, 175, 0.3);
+  //color: $colorLightTitle;
+  filter: blur(1px);
+}

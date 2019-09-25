@@ -21,17 +21,21 @@
 
   &__blockLeft,
   &__blockRight {
+    display: flex;
+    flex-direction: column;
     width: 50%;
   }
 }
 
 @include desktop() {
   .offers {
-    //max-width: $widthFullDesktop;
-    //padding-top: 62px;
 
     &__blockLeft {
       padding-top: 80px;
+    }
+
+    &__blockRight {
+      align-items: flex-end;
     }
 
     &__card {
@@ -42,13 +46,10 @@
       background: $colorBackgroundLightMilk;
       margin-top: 64px;
       font-size: 16px;
-
-      &_right {
-        margin-left: 142px;
-      }
     }
 
     &__text {
+      width: 467px;
       font-size: 20px;
       line-height: 30px;
       margin-top: 100px;
@@ -83,6 +84,12 @@
       @include button(200px, 45px, $colorButtonLightGreen);
       top: 92%;
       left: 243px;
+    }
+
+    &__decorativeTitle {
+      @include decorativeTitle;
+      right: -60px;
+      top: 530px;
     }
   }
 }

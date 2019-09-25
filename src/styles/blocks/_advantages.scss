@@ -41,12 +41,9 @@
       margin-bottom: 27px;
     }
 
-    &__title {
-      position: absolute;
+    &__decorativeTitle {
+      @include decorativeTitle;
       right: -210px;
-      transform: rotate(-90deg);
-      color: $colorLightTitle;
-      filter: blur(3px);
     }
   }
 }
