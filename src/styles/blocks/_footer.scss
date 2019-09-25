@@ -5,13 +5,6 @@
   box-shadow: inset 0 5px 35px rgba(0, 0, 0, 0.2);
 }
 
-@include desktop() {
-  .footerWrap {
-    position: relative;
-    height: 840px;
-  }
-}
-
 .footer {
   height: 100%;
   position: relative;
@@ -37,6 +30,12 @@
     color: $colorText;
   }
 
+  &__addressTitle,
+  &__addressText {
+    font-weight: 300;
+  }
+
+
   &__socialWrap {
     display: flex;
   }
@@ -44,7 +43,6 @@
   &__iconLink {
     fill: $colorTextLight;
     transition: all .3s ease;
-    margin-right: 10px;
   }
 
   &__map {
@@ -53,22 +51,10 @@
 
   &__formWrap {
     position: absolute;
-    left: 192px;
-    bottom: 89px;
-    background: $colorBackgroundLightMilk;
-    box-shadow: 0 5px 35px rgba(0, 0, 0, 0.2);
-    padding: 33px;
   }
 
   &__form {
     display: flex;
-  }
-
-  &__formLeft,
-  &__formRight {
-    display: flex;
-    flex-direction: column;
-    width: 50%;
   }
 
   &__textarea {
@@ -95,6 +81,10 @@
     display: inline-block;
     color: $colorText;
   }
+
+  &__iconLink {
+    margin-right: 10px;
+  }
 }
 
 .footer__input_checkboxInput:checked + label.footer__checkboxLabel:before {
@@ -102,7 +92,19 @@
 }
 
 @include desktop() {
+  .footerWrap {
+    position: relative;
+    height: 840px;
+  }
+
   .footer {
+
+    &__map_tablet,
+    &__addressText_tablet,
+    &__subTitle,
+    &__form_tablet {
+      display: none;
+    }
 
     &__content {
       height: 720px;
@@ -120,7 +122,6 @@
     &__addressTitle,
     &__addressText {
       font-size: 20px;
-      font-weight: 300;
     }
 
     &__addressTitle {
@@ -138,6 +139,18 @@
     &__formWrap {
       width: 811px;
       height: 338px;
+      left: 192px;
+      bottom: 89px;
+      padding: 33px;
+      background: $colorBackgroundLightMilk;
+      box-shadow: 0 5px 35px rgba(0, 0, 0, 0.2);
+    }
+
+    &__formLeft,
+    &__formRight {
+      display: flex;
+      flex-direction: column;
+      width: 50%;
     }
 
     &__formTitle {
@@ -174,6 +187,98 @@
 
     &__textarea::placeholder {
       padding-top: 107px;
+    }
+  }
+}
+
+@include tablet() {
+  .footerWrap {
+    position: relative;
+    height: 959px;
+  }
+
+  .footer {
+
+    &__map_desktop,
+    &__bottom,
+    &__addressText_desktop,
+    &__menu {
+      display: none;
+    }
+
+    &__formWrap {
+      width: 100%;
+      height: 621px;
+      top: 0;
+      left: 0;
+      padding: 24px 131px 0;
+      box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    }
+
+    &__content {
+      margin-top: 621px;
+    }
+
+    &__left {
+      width: 50%;
+      padding: 13px;
+    }
+
+    &__addressTitle,
+    &__addressText {
+      font-size: 18px;
+    }
+
+    &__addressTitle {
+      margin-bottom: 10px;
+    }
+
+    &__addressText {
+      margin-bottom: 20px;
+    }
+
+    &__form {
+      display: flex;
+      flex-direction: column;
+
+      &_desktop {
+        display: none;
+      }
+    }
+
+    &__formTitle {
+      font-weight: 400;
+      margin-bottom: 30px;
+    }
+
+    &__subTitle {
+      font-size: 20px;
+      margin-bottom: 50px;
+    }
+
+    &__bottomTablet {
+      display: flex;
+    }
+
+    &__textarea {
+      height: 77px;
+      margin-bottom: 46px;
+    }
+
+    &__textarea::placeholder {
+      padding-top: 48px;
+    }
+
+    &__formBottom {
+      display: flex;
+    }
+
+    &__label {
+      width: 506px;
+    }
+
+    &__checkboxLabel_tablet {
+      margin-bottom: 0;
     }
   }
 }
