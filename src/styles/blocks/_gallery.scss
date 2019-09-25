@@ -1,8 +1,10 @@
 @import '../variables';
 
 .galleryWrap {
+  position: relative;
+  z-index: 100;
   background: $colorBackgroundLightGrey;
-  box-shadow: inset 0 5px 35px rgba(0, 0, 0, 0.2);
+  box-shadow:  0 0 35px rgba(0, 0, 0, 0.2);
 }
 
 @include desktop() {
@@ -12,8 +14,9 @@
 }
 
 .gallery {
+  position: relative;
+  //z-index: 20;
   height: 100%;
-  //margin: 0 auto;
   display: flex;
 
   &__buttonWrap {
@@ -23,9 +26,6 @@
 
   &__buttonInstagram {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
-  }
-
-  &__buttonInstagram {
   }
 }
 

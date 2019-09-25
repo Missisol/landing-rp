@@ -1,12 +1,16 @@
 @import '../variables';
 
 .offersWrap {
+  position: relative;
+  z-index: 100;
   background: $colorBackgroundLightBrown;
   box-shadow: 0 5px 35px rgba(0, 0, 0, 0.2);
 }
 
 @include desktop() {
-  height: 1188px;
+  .offersWrap {
+    height: 1188px;
+  }
 }
 
 .offers {
