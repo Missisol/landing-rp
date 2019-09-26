@@ -137,12 +137,13 @@
       height: 85px;
       background: $colorBackgroundLightBrown;
       box-shadow: inset 0 0 25px rgba(0, 0, 0, 0.35);
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
 
     &__decorativeTitle {
       @include decorativeTitleTablet;
-      top: 14px;
-      left: 442px;
     }
   }
 
@@ -188,3 +189,53 @@
   }
 }
 
+@include phone() {
+  .programWrap {
+
+    &__upperTitleWrap,
+    &__decorativeTitle {
+      display: none;
+    }
+  }
+
+  .program {
+    height: 625px;
+
+    &__image_desktop {
+      display: none;
+    }
+
+    &__formWrap {
+      width: 100%;
+      padding: 40px 0 35px;
+    }
+
+    &__formTitle {
+      margin-bottom: 30px;
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 23px;
+    }
+
+    &__formSubtitle {
+      margin-bottom: 50px;
+      font-size: 18px;
+    }
+
+    &__label {
+      width: 427px;
+    }
+
+    &__label {
+      margin-bottom: 23px;
+    }
+
+    &__checkboxLabel {
+      margin-bottom: 66px;
+    }
+
+    &__submit {
+      @include button(200px, 45px, $colorButtonLightGreen)
+    }
+  }
+}

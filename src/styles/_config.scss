@@ -62,23 +62,24 @@ h6 {
 
 @include desktop() {
   .container {
-    width: $widthFullDesktop;
+    max-width: $widthFullDesktop;
   }
 
   .container-min {
-    width: $widthContainerDesktop;
+    max-width: $widthContainerDesktop;
   }
 }
 
 @include tablet() {
   .container,
   .container-min {
-    width: $widthFullTablet;
+    max-width: $widthFullTablet;
   }
 }
 @include phone() {
-  .container {
-    width: $widthFullPhone;
+  .container,
+  .container-min {
+    max-width: $widthContainerPhone;
   }
 }
 

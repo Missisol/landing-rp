@@ -54,6 +54,10 @@
       font-size: 16px;
     }
 
+    &__image_phone {
+      display: none;
+    }
+
     &__text {
       width: 467px;
       font-size: 20px;
@@ -96,6 +100,10 @@
       @include decorativeTitle;
       top: 530px;
       right: -65px;
+
+      &_tablet {
+        display: none;
+      }
     }
   }
 }
@@ -106,7 +114,7 @@
   }
 
   .offers {
-    padding: 0 56px;
+    padding: 40px 56px 0;
 
     &__blockLeft,
     &__blockRight {
@@ -123,7 +131,7 @@
     &__textTabletWrap {
       display: flex;
       justify-content: space-between;
-      margin: 140px 0 90px;
+      margin: 62px 0 90px;
     }
 
     &__card {
@@ -140,13 +148,17 @@
       font-size: 18px;
     }
 
+    &__image_phone {
+      display: none;
+    }
+
     &__text {
       max-width: 328px;
       font-size: 20px;
       line-height: 30px;
 
       &_last {
-        margin-top: 20px;
+        margin-bottom: 60px;
         max-width: 414px;
         text-align: center;
       }
@@ -169,6 +181,86 @@
     }
 
     &__button {
+      @include button(200px, 45px, $colorButtonLightGreen);
+    }
+
+    &__decorativeTitle {
+      @include decorativeTitleTablet;
+
+      &_desktop {
+        display: none;
+      }
+    }
+  }
+}
+
+@include phone() {
+  .offersWrap {
+    height: 1825px;
+  }
+
+  .offers {
+    padding: 6px 0;
+
+    &__blockLeft,
+    &__blockRight,
+    &__textTabletWrap,
+    &__text,
+    &__button {
+      display: none;
+    }
+
+    &__blockTablet {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    &__card {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      max-width: 328px;
+      height: 535px;
+      padding: 17px;
+      background: $colorBackgroundLightMilk;
+      margin-bottom: 46px;
+    }
+
+    &__card,
+    &__title {
+      font-size: 18px;
+      line-height: 27px;
+    }
+
+    &__title {
+      margin-bottom: 10px;
+    }
+
+    &__cardText {
+      margin-bottom: 28px;
+    }
+
+    &__image {
+      max-width: $widthContainerPhone - 2 * 17px;
+
+      &_desktop {
+        display: none;
+      }
+    }
+
+    &__textBlock {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    &__cardLink {
+      color: $colorTextLight;
+    }
+
+    &__button {
       position: absolute;
       @include button(200px, 45px, $colorButtonLightGreen);
       bottom: -100px;
@@ -177,12 +269,11 @@
 
     &__decorativeTitle {
       @include decorativeTitleTablet;
-      top: 40px;
-      left: 484px;
+      margin-bottom: 20px;
+
+      &_desktop {
+        display: none;
+      }
     }
   }
-}
-
-@include phone() {
-
 }
