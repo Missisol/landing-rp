@@ -174,7 +174,8 @@
                         </div>
                     </div>
                     <section class="offers__card">
-                        <img src="assets/images/offers/card-3.jpg" alt="card-3" class="offers__image offers__image_desktop">
+                        <img src="assets/images/offers/card-3.jpg" alt="card-3"
+                             class="offers__image offers__image_desktop">
                         <div class="offers__textBlock">
                             <h4 class="offers__title"># Ассортимент</h4>
                             <div class="offers__cardText">
@@ -185,10 +186,12 @@
                             </div>
                             <a href="#" class="offers__cardLink">Хочу получить каталог</a>
                         </div>
-                        <img src="assets/images/offers/card-ph-1.jpg" alt="card-3" class="offers__image offers__image_phone">
+                        <img src="assets/images/offers/card-ph-1.jpg" alt="card-3"
+                             class="offers__image offers__image_phone">
                     </section>
                     <section class="offers__card">
-                        <img src="assets/images/offers/card-1.jpg" alt="card-1" class="offers__image offers__image_desktop">
+                        <img src="assets/images/offers/card-1.jpg" alt="card-1"
+                             class="offers__image offers__image_desktop">
                         <div class="offers__textBlock">
                             <h4 class="offers__title"># Брендирование</h4>
                             <div class="offers__cardText">
@@ -198,10 +201,12 @@
                             </div>
                             <a href="#" class="offers__cardLink">Узнать больше</a>
                         </div>
-                        <img src="assets/images/offers/card-ph-2.jpg" alt="card-1" class="offers__image offers__image_phone">
+                        <img src="assets/images/offers/card-ph-2.jpg" alt="card-1"
+                             class="offers__image offers__image_phone">
                     </section>
                     <section class="offers__card">
-                        <img src="assets/images/offers/card-2.jpg" alt="card-2" class="offers__image offers__image_desktop">
+                        <img src="assets/images/offers/card-2.jpg" alt="card-2"
+                             class="offers__image offers__image_desktop">
                         <div class="offers__textBlock">
                             <h4 class="offers__title"># Сотрудничество</h4>
                             <div class="offers__cardText">
@@ -211,7 +216,8 @@
                             </div>
                             <a href="#" class="offers__cardLink">Хочу сотрудничать</a>
                         </div>
-                        <img src="assets/images/offers/card-ph-3.jpg" alt="card-2" class="offers__image offers__image_phone">
+                        <img src="assets/images/offers/card-ph-3.jpg" alt="card-2"
+                             class="offers__image offers__image_phone">
                     </section>
                     <div class="offers__text offers__text_last">
                         В то время как продавцы уличной мебели предлагают ограниченный
@@ -360,7 +366,7 @@
             <h1 class="gallery__decorativeTitle gallery__decorativeTitle_desktop">Галерея</h1>
         </div>
         <div class="footerWrap">
-            <footer class="footer container-min">
+            <footer class="footer container-min footer_desktop">
                 <div class="footer__content">
                     <div class="footer__left">
                         <div class="footer__contacts">
@@ -477,6 +483,73 @@
                             <button type="submit" id="footerSendTablet" class="program__submit">Отправить</button>
                         </div>
                     </form>
+                </div>
+            </footer>
+            <div class="footer footer_phone">
+                <div class="footer__formWrap">
+                    <h2 class="footer__formTitle">Оставить сообщение</h2>
+                    <div class="footer__subTitle">
+                        Оставьте нам сообщение и получите ответы на все ваши вопросы в ближайшее время
+                    </div>
+                    <form action="#" method="post" name="footerForm" class="footer__form">
+                        <label class="program__label footer__label">
+                            <input type="text" name="footName" class="program__input" placeholder="Имя">
+                        </label>
+                        <label class="program__label footer__label">
+                            <input type="email" name="footEmail" class="program__input"
+                                   placeholder="Электронная почта">
+                        </label>
+                        <label class="program__label footer__label">
+                            <input type="text" name="footPhone" class="program__input" placeholder="Номер телефона">
+                        </label>
+                        <textarea class="footer__textarea footer__textarea" name="footText"
+                                  placeholder="Сообщение"></textarea>
+                        <div class="footer__formBottom">
+                            <input type="checkbox"
+                                   class="program__input program__input_checkboxInput footer__input_checkboxInput"
+                                   id="CheckboxInputFooter-3">
+                            <label class="program__checkboxLabel footer__checkboxLabel_tablet"
+                                   for="CheckboxInputFooter-3">
+                                <span class="footer__checkboxText">Я согласен на обработку  заполняемых мною данных </span>
+                            </label>
+                            <button type="submit" id="footerSendPhone" class="program__submit">Отправить</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <footer class="footer__contacts footer_phone">
+                <div class="footer__item">
+                    <div class="footer__addressTitle">Адрес</div>
+                    <div class="footer__addressText footer__addressText_desktop">
+                        г. Краснодар, ул. Красных Партизан,  дом 218
+                    </div>
+                    <div class="footer__addressText footer__addressText_tablet">
+                        г. Краснодар, <br> ул. Красных Партизан,  дом 218
+                    </div>
+                </div>
+                <div class="footer__item">
+                    <div class="footer__addressTitle">Электронная почта</div>
+                    <div class="footer__addressText">
+                        info@ricciresort.ru
+                    </div>
+                </div>
+                <div class="footer__item">
+                    <div class="footer__addressTitle">Телефон</div>
+                    <div class="footer__addressText">
+                        8-800-550-36-56
+                    </div>
+                </div>
+                <div class="footer__socialWrap">
+                    <a href="#" class="footer__iconLink" target="_blank">
+                        <svg width="33" height="33">
+                            <use xlink:href="#facebook" class="footer__icon"/>
+                        </svg>
+                    </a>
+                    <a href="#" class="footer__iconLink" target="_blank">
+                        <svg width="33" height="33">
+                            <use xlink:href="#instagram" class="footer__icon"/>
+                        </svg>
+                    </a>
                 </div>
             </footer>
             <div class="footer__map footer__map_phone">
