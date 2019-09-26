@@ -31,12 +31,12 @@
     transition: all .3s ease;
   }
 
-  &__phone {
-    text-align: center;
+  &__link:hover {
+    color: $colorTextLight;
   }
 
-  &__sideMenuWrap {
-    position: absolute;
+  &__phone {
+    text-align: center;
   }
 
   &__icon,
@@ -78,10 +78,6 @@
       line-height: 2 * $heightHeaderDesktop / 3;
     }
 
-    &__link:hover {
-      color: $colorTextLight;
-    }
-
     &__phone {
       width: 223px;
       height: 100%;
@@ -110,12 +106,50 @@
 
     &__phone {
       font-size: 20px;
-      margin-right: 65px;
+    }
+
+    &__menuIconWrap {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+      width: 100px;
     }
 
     &__icon {
-      left: 666px;
-      top: -3px;
+      top: 26px;
+      right: 40px;
+    }
+
+    &__sideMenuWrap {
+      position: absolute;
+      top: 60px;
+      right: -370px;
+      z-index: 300;
+      width: 370px;
+      height: 964px;
+      background: $colorBackgroundLightMilk;
+      padding: 40px 107px;
+      display: flex;
+      flex-direction: column;
+      transition: right 0.5s ease-out;
+    }
+
+    &__sideMenu {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 400px;
+    }
+
+    &__link_side {
+      margin-bottom: 40px;
+    }
+
+    &__phone {
+
+      &_side {
+        margin-bottom: 40px;
+      }
     }
   }
 }

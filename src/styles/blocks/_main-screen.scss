@@ -135,6 +135,10 @@
       width: 468px;
       height: 753px;
     }
+
+    &__sideMenuWrap {
+      display: none;
+    }
   }
 }
 
@@ -143,7 +147,7 @@
     height: 964px;
     margin-top: $heightHeaderDesktop;
 
-    &__content {
+     &__content {
       max-width: 676px;
       height: 846px;
       padding: 100px 0 105px;

@@ -37,12 +37,24 @@
                     <a class="header__link" href="#">Контакты</a>
                 </nav>
                 <div class="header__phone">8-800-550-36-56</div>
-                <div class="header__sideMenuWrap">
-                    <span class="header__icon"></span>
+            </div>
+            <div id="iconWrap" class="header__menuIconWrap">
+                <span id="icon" class="header__icon"></span>
+                <div id="sideMenuWrap" class="header__sideMenuWrap invisible">
+                    <nav class="header__sideMenu">
+                        <a class="header__link header__link_side" href="#">О компании</a>
+                        <a class="header__link header__link_side" href="#">Приемущества</a>
+                        <a class="header__link header__link_side" href="#">Стать партнером</a>
+                        <a class="header__link header__link_side" href="#">Галерея</a>
+                        <a class="header__link header__link_side" href="#">Контакты</a>
+                    </nav>
+                    <div class="header__phone header__phone_side">8-800-550-36-56</div>
+                    <div class="header__phone">info@ricciresort.ru</div>
                 </div>
             </div>
         </header>
         <section class="main">
+            <div class="main__dark"></div>
             <div class="main__content">
                 <h1 class="main__title">
                     Забудьте все, что вы знали об уличной мебели раньше
@@ -426,7 +438,8 @@
                             <input type="checkbox"
                                    class="program__input program__input_checkboxInput footer__input_checkboxInput"
                                    id="CheckboxInputFooter-2">
-                            <label class="program__checkboxLabel footer__checkboxLabel_tablet" for="CheckboxInputFooter-2">
+                            <label class="program__checkboxLabel footer__checkboxLabel_tablet"
+                                   for="CheckboxInputFooter-2">
                                 <span class="footer__checkboxText">Я согласен на обработку  заполняемых мною данных </span>
                             </label>
                             <button type="submit" id="footerSendTablet" class="program__submit">Отправить</button>
