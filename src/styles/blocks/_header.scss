@@ -43,8 +43,6 @@
   &__icon::before,
   &__icon::after {
     position: absolute;
-    width: 7px;
-    height: 7px;
     background: $colorText;
   }
 
@@ -55,22 +53,37 @@
     transition: 0.2s;
   }
 
-  &__icon::before {
-    transform: translateY(-12px);
+  &__sideMenuWrap {
+    position: absolute;
+    z-index: 450;
+    background: $colorBackgroundLightMilk;
+    box-shadow: inset 0 5px 35px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    transition: right 0.5s ease-out;
   }
 
-  &__icon::after {
-    transform: translateY(12px);
-  }
+  //&__sideMenu {
+  //  display: flex;
+  //  flex-direction: column;
+  //}
 }
 
 @include desktop() {
   .header {
     height: $heightHeaderDesktop;
 
+    &__sideMenuWrap {
+      display: none;
+    }
+
     &__wrap {
       max-width: $widthFullDesktop;
       font-size: 16px;
+    }
+
+    &__logo_phone {
+      display: none;
     }
 
     &__link {
@@ -100,6 +113,10 @@
       max-width: 676px;
     }
 
+    &__logo_phone {
+      display: none;
+    }
+
     &__menuWrap {
       display: none;
     }
@@ -121,23 +138,30 @@
       right: 40px;
     }
 
+    &__icon,
+    &__icon::before,
+    &__icon::after {
+      width: 7px;
+      height: 7px;
+    }
+
+    &__icon::before {
+      transform: translateY(-12px);
+    }
+
+    &__icon::after {
+      transform: translateY(12px);
+    }
+
     &__sideMenuWrap {
-      position: absolute;
-      top: 60px;
+      top: $heightHeaderDesktop;
       right: -370px;
-      z-index: 300;
       width: 370px;
       height: 964px;
-      background: $colorBackgroundLightMilk;
       padding: 40px 107px;
-      display: flex;
-      flex-direction: column;
-      transition: right 0.5s ease-out;
     }
 
     &__sideMenu {
-      display: flex;
-      flex-direction: column;
       margin-bottom: 400px;
     }
 
@@ -158,6 +182,74 @@
   .header {
     width: 100%;
     height: $heightHeaderPhone;
-  }
 
+    &__wrap {
+      max-width: $widthFullPhone;
+    }
+
+    &__logo {
+      margin-left: 13px;
+
+      &_desktop {
+        display: none;
+      }
+    }
+
+    &__menuWrap {
+      display: none;
+    }
+
+    &__phone {
+      display: none;
+
+      &_side {
+        display: block;
+        margin-bottom: 20px;
+      }
+    }
+
+    &__menuIconWrap {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+      width: 100px;
+    }
+
+    &__icon {
+      top: 18px;
+      right: 40px;
+    }
+
+    &__icon,
+    &__icon::before,
+    &__icon::after {
+      width: 5px;
+      height: 5px;
+    }
+
+    &__icon::before {
+      transform: translateY(-8px);
+    }
+
+    &__icon::after {
+      transform: translateY(8px);
+    }
+
+    &__sideMenuWrap {
+      top: $heightHeaderPhone;
+      right: -243px;
+      width: 243px;
+      height: 625px;
+      padding: 40px 47px;
+    }
+
+    &__sideMenu {
+      margin-bottom: 240px;
+    }
+
+    &__link_side {
+      margin-bottom: 20px;
+    }
+  }
 }

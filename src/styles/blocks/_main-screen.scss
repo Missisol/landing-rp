@@ -59,6 +59,16 @@
   &__navTitle {
     color: $colorText;
   }
+
+  &__overlay {
+    position: absolute;
+    z-index: 400;
+    background: rgba(0, 0, 0, 0.3);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+  }
 }
 
 @include desktop() {
@@ -127,6 +137,10 @@
       align-items: center;
     }
 
+    &__navCall {
+      display: none;
+    }
+
     &__image {
       right: 0;
       top: 77px;
@@ -143,13 +157,19 @@
 }
 
 @include tablet() {
+  $height: 964px;
+
   .main {
-    height: 964px;
+    height: $height;
     margin-top: $heightHeaderDesktop;
+
+    &__overlay {
+      height: $height;
+    }
 
      &__content {
       max-width: 676px;
-      height: 846px;
+      height: $height - 118px;
       padding: 100px 0 105px;
     }
 
@@ -218,6 +238,10 @@
       align-items: center;
     }
 
+    &__navCall {
+      display: none;
+    }
+
     &__image {
       right: 0;
       top: 176px;
@@ -230,7 +254,99 @@
 }
 
 @include phone() {
-  .main {
+    $height: 625px;
 
-  }
+    .main {
+      height: $height;
+      margin-top: $heightHeaderPhone;
+      background: #9D9D9D;
+
+      &__overlay {
+        height: $height;
+      }
+
+      &__content {
+        max-width: $widthFullPhone;
+        height: $height - 43px;
+        padding: 40px 85px 40px 0;
+        color: #ffffff;
+      }
+
+      &__wrap {
+        padding-right: 50px;
+      }
+
+      &__title {
+        position: relative;
+        z-index: 150;
+        margin-bottom: 40px;
+      }
+
+      &__contentLeft {
+        display: flex;
+        flex-direction: column;
+      }
+
+      //&__textWrap {
+      //  max-width: 348px;
+      //}
+
+      &__text {
+        min-width: 280px;
+        line-height: 30px;
+
+        &_first {
+          display: none;
+        }
+      }
+
+      &__contentRight {
+       display: none;
+      }
+
+      &__button {
+        @include button(217px, 50px, $colorBackgroundLightMilk);
+        margin-top: 36px;
+      }
+
+      &__innerTextWrap {
+        margin-bottom: 20px;
+      }
+
+      &__textSmall {
+        margin-bottom: 19px;
+        line-height: 19px;
+
+        &_subtitle {
+          line-height: 21px;
+        }
+      }
+
+      &__navWrap {
+        height: 43px;
+        background: $colorBackgroundLightMilk;
+        box-shadow: 0 5px 35px rgba(0, 0, 0, 0.2);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      &__nav {
+        display: none;
+      }
+
+      &__navCall {
+        font-size: 18px;
+      }
+
+      &__image {
+        right: 0;
+        top: 125px;
+        z-index: 100;
+        background: url(../assets/images/main-screen/lamp-ph.png) no-repeat;
+        background-size: cover;
+        width: 236px;
+        height: 500px;
+      }
+    }
 }

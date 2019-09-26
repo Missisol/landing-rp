@@ -28,7 +28,8 @@
         </svg>
         <header class="header">
             <div class="header__wrap">
-                <img src="assets/images/header/logo.png" alt="logo" class="header__logo">
+                <img src="assets/images/header/logo.png" alt="logo" class="header__logo header__logo_desktop">
+                <img src="assets/images/header/logo-ph.png" alt="logo" class="header__logo header__logo_phone">
                 <nav class="header__menuWrap">
                     <a class="header__link" href="#">О компании</a>
                     <a class="header__link" href="#">Приемущества</a>
@@ -49,12 +50,12 @@
                         <a class="header__link header__link_side" href="#">Контакты</a>
                     </nav>
                     <div class="header__phone header__phone_side">8-800-550-36-56</div>
-                    <div class="header__phone">info@ricciresort.ru</div>
+                    <div class="header__phone header__phone_side">info@ricciresort.ru</div>
                 </div>
             </div>
         </header>
         <section class="main">
-            <div class="main__dark"></div>
+            <div id="overlay" class="main__overlay invisible"></div>
             <div class="main__content">
                 <h1 class="main__title">
                     Забудьте все, что вы знали об уличной мебели раньше
@@ -83,6 +84,7 @@
                     <a href="#" class="main__navTitle"># Дизайнерам</a>
                     <a href="#" class="main__navTitle"># Торговым представителям</a>
                 </div>
+                <div class="main__navCall">Позвонить</div>
             </div>
             <div class="main__image">
                 <div class="main__contentRight">
