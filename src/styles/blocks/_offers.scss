@@ -28,7 +28,8 @@
 
   .offers {
 
-    &__blockTablet {
+    &__blockTablet,
+    &__bcgImage {
       display: none;
     }
 
@@ -94,6 +95,10 @@
       @include button(200px, 45px, $colorButtonLightGreen);
       top: 92%;
       left: 243px;
+
+      &_phone {
+        display: none;
+      }
     }
 
     &__decorativeTitle {
@@ -117,7 +122,8 @@
     padding: 40px 56px 0;
 
     &__blockLeft,
-    &__blockRight {
+    &__blockRight,
+    &__bcgImage {
       display: none;
     }
 
@@ -182,6 +188,10 @@
 
     &__button {
       @include button(200px, 45px, $colorButtonLightGreen);
+
+      &_phone {
+        display: none;
+      }
     }
 
     &__decorativeTitle {
@@ -196,7 +206,7 @@
 
 @include phone() {
   .offersWrap {
-    height: 1825px;
+    height: 2496px;
   }
 
   .offers {
@@ -260,11 +270,12 @@
       color: $colorTextLight;
     }
 
-    &__button {
+    &__button_phone {
+      display: block;
       position: absolute;
       @include button(200px, 45px, $colorButtonLightGreen);
-      bottom: -100px;
-      left: 288px;
+      bottom: -620px;
+      left: 17%;
     }
 
     &__decorativeTitle {
@@ -274,6 +285,28 @@
       &_desktop {
         display: none;
       }
+    }
+
+    &__bcgImage {
+      background: url(../assets/images/offers/card-ph-4.jpg) no-repeat;
+      background-size: cover;
+      height: 667px;
+      width: $widthFullPhone;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+    }
+
+    &__bcgImage {
+      color: #ffffff;
+      font-size: 24px;
+      padding: 61px 33px;
+    }
+
+    &__bcgText {
+      color: #838383;
+      font-size: 18px;
+      margin-bottom: 30px;
     }
   }
 }

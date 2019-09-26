@@ -40,7 +40,8 @@
       height: 819px;
       margin-bottom: 26px;
 
-      &_tablet {
+      &_tablet,
+      &_phone {
         display: none;
       }
     }
@@ -83,7 +84,8 @@
       flex-wrap: wrap;
       justify-content: space-between;
 
-      &_desktop {
+      &_desktop,
+      &_phone {
         display: none;
       }
     }
@@ -104,6 +106,50 @@
 
     &__buttonCatalog {
       @include button(200px, 45px, $colorButtonLightGreen);
+    }
+
+    &__decorativeTitle {
+      @include decorativeTitleTablet;
+      text-align: center;
+      margin-bottom: 20px;
+
+      &_desktop {
+        display: none;
+      }
+    }
+  }
+}
+
+@include phone() {
+  .galleryWrap {
+    background: $colorBackgroundLightMilk;
+  }
+
+  .gallery {
+    padding: 20px 0 43px;
+
+    &__wrap {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+
+      &_desktop,
+      &_tablet {
+        display: none;
+      }
+    }
+
+    &__buttonWrap {
+      display: none;
+    }
+
+    &__image {
+      max-width: $widthContainerPhone;
+      margin-bottom: 15px;
+    }
+
+    &__image:nth-child(3) {
+      margin-left: 33%;
     }
 
     &__decorativeTitle {

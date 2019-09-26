@@ -100,6 +100,7 @@
   .footer {
 
     &__map_tablet,
+    &__map_phone,
     &__addressText_tablet,
     &__subTitle,
     &__form_tablet {
@@ -200,6 +201,7 @@
   .footer {
 
     &__map_desktop,
+    &__map_phone,
     &__bottom,
     &__addressText_desktop,
     &__menu {
@@ -283,4 +285,104 @@
   }
 }
 
+@include phone() {
+  .footerWrap {
+    position: relative;
+    //height: 959px;
+  }
+
+  .footer {
+    $height: 625px;
+
+    &__map_desktop,
+    &__map_tablet,
+    &__bottom,
+    &__addressText_desktop,
+    &__menu {
+      display: none;
+    }
+
+    &__formWrap {
+      width: 100%;
+      height: $height;
+      top: 0;
+      left: 0;
+      padding: 24px 0 0;
+    }
+
+    &__content {
+      margin-top: $height;
+      flex-direction: column;
+    }
+
+    &__left {
+      width: 100%;
+      padding: 13px;
+    }
+
+    &__addressTitle,
+    &__addressText {
+      font-size: 18px;
+    }
+
+    &__addressTitle {
+      margin-bottom: 10px;
+    }
+
+    &__addressText {
+      margin-bottom: 20px;
+    }
+
+    &__form {
+      display: flex;
+      flex-direction: column;
+
+      &_desktop {
+        display: none;
+      }
+    }
+
+    &__formTitle {
+      font-weight: 400;
+      margin-bottom: 20px;
+      font-size: 20px;
+    }
+
+    &__subTitle {
+      font-size: 18px;
+      margin-bottom: 30px;
+    }
+
+    &__bottomTablet {
+      display: flex;
+    }
+
+    &__textarea {
+      height: 77px;
+      margin-bottom: 46px;
+    }
+
+    &__textarea::placeholder {
+      padding-top: 48px;
+    }
+
+    &__formBottom {
+      display: flex;
+      flex-direction: column;
+    }
+
+    &__label {
+      width: $widthContainerPhone;
+    }
+
+    &__checkboxLabel_tablet {
+      margin-bottom: 0;
+    }
+
+    &__map_phone {
+      display: flex;
+      justify-content: center;
+    }
+  }
+}
 
