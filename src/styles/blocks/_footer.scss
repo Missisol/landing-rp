@@ -24,8 +24,11 @@
 
   &__addressTitle,
   &__addressText {
-    font-weight: 400;
     color: $colorText;
+  }
+
+  &__addressTitle {
+    font-weight: 400;
   }
 
 
@@ -392,6 +395,7 @@
     &__map_phone {
       display: flex;
       justify-content: center;
+      padding-bottom: 30px;
     }
 
     &__submit {
