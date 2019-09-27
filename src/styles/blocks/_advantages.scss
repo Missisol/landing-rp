@@ -137,7 +137,8 @@
 
 @include phone() {
   .advantagesWrap {
-        //height: 1700px;
+    background: $colorBackgroundLightBlue;
+    //height: 1700px;
     //background: url(../assets/images/advantages/back-ph.jpg) 0 100% no-repeat;
     //background-size: contain;
   }
@@ -181,8 +182,7 @@
     }
 
     &__linkCatalog {
-      @include button(200px, 50px, $colorBackgroundLightMilk);
-      color: #CA2F03;
+      @include button(220px, 50px, $colorBackgroundLightMilk);
       margin-bottom: 20px;
       align-self: center;
     }

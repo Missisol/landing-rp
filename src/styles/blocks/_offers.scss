@@ -258,6 +258,8 @@
 
     &__image {
       max-width: $widthContainerPhone - 2 * 17px;
+      min-width: 97vw;
+      margin-bottom: 2em;
 
       &_desktop {
         display: none;
