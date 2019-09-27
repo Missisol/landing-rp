@@ -41,6 +41,11 @@ h6 {
   font-weight: 300;
 }
 
+input,
+textarea {
+  outline: none;
+}
+
 .bigWrap {
   min-height: 100%;
   display: flex;

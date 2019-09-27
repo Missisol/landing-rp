@@ -102,17 +102,16 @@ $colorError: #CA2F03;
 
   width: $btn-width;
   height: $btn-height;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
   background: $btn-color;
   font-size: 18px;
-  font-weight: 300;
+  font-weight: 400;
   text-align: center;
   line-height: $btn-height;
   color: $colorText;
   cursor: pointer;
 
   &:hover {
-    box-shadow: none;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
   }
 
   &:disabled {
@@ -133,8 +132,7 @@ $colorError: #CA2F03;
 @mixin decorativeTitle {
   position: absolute;
   transform: rotate(-90deg);
-  color: rgba(175, 175, 175, 0.3);
-  filter: blur(1px);
+  color: $colorTextLight;
 }
 
 @mixin decorativeTitleTablet {
