@@ -181,7 +181,7 @@
     }
 
     &__linkCatalog {
-      @include button(200px, 50px, $colorBackgroundLightMilk)
+      @include button(200px, 50px, $colorBackgroundLightMilk);
       color: #CA2F03;
       margin-bottom: 20px;
       align-self: center;
