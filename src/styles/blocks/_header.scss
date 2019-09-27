@@ -156,14 +156,14 @@
 
     &__sideMenuWrap {
       top: $heightHeaderDesktop;
-      right: -50vw;
-      height: 50vh;
+      right: -100vw;
+      //height: 50vh;
       padding: 40px 40px;
     }
 
-    &__sideMenu {
-      margin-bottom: 400px;
-    }
+    //&__sideMenu {
+    //  margin-bottom: 400px;
+    //}
 
     &__link_side {
       margin-bottom: 40px;
@@ -172,6 +172,7 @@
     &__phone {
 
       &_side {
+        text-align: left;
         margin-bottom: 40px;
       }
     }
@@ -201,6 +202,7 @@
       display: none;
 
       &_side {
+        text-align: left;
         display: block;
         margin-bottom: 20px;
       }
@@ -236,14 +238,13 @@
 
     &__sideMenuWrap {
       top: $heightHeaderPhone;
-      right: -60vw;
-      height: 100vh;
+      right: -100vw;
       padding: 40px 47px;
     }
 
-    &__sideMenu {
-      margin-bottom: 240px;
-    }
+    //&__sideMenu {
+    //  margin-bottom: 240px;
+    //}
 
     &__link_side {
       margin-bottom: 20px;
