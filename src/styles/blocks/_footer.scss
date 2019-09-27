@@ -59,10 +59,11 @@
 
   &__textarea {
     background: $colorBackgroundLightMilk;
-    border: none;
-    border-bottom: 1px solid $colorBorder;
+    border: 1px solid $colorBorder;
     resize: none;
     font-weight: 300;
+    padding: 0 8px;
+    height: auto;
   }
 
   &__textarea::placeholder {
@@ -190,7 +191,7 @@
 
     &__textarea {
       width: 360px;
-      height: 136px;
+      //height: 136px;
       margin: 11px 0 30px;
     }
 
@@ -274,7 +275,7 @@
     }
 
     &__textarea {
-      height: 123px;
+      //height: 123px;
       margin-bottom: 30px;
     }
 
@@ -377,7 +378,7 @@
     }
 
     &__textarea {
-      height: 118px;
+      //height: 118px;
       margin-bottom: 20px;
     }
 
