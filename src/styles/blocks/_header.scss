@@ -68,6 +68,26 @@
     flex-direction: column;
     transition: right 0.5s ease-out;
   }
+
+  &__icon::before {
+    transform: translateY(-6px);
+  }
+
+  &__icon::after {
+    transform: translateY(6px);
+  }
+}
+
+#iconWrap.active #icon {
+  height: 0;
+}
+
+#iconWrap.active #icon::before {
+  transform: rotate(-45deg);
+}
+
+#iconWrap.active #icon::after {
+  transform: rotate(45deg);
 }
 
 @include desktop() {
@@ -141,24 +161,17 @@
     }
 
     &__icon {
-      top: 26px;
-      right: 40px;
+      //top: 26px;
+      //right: 40px;
     }
 
     &__icon,
     &__icon::before,
     &__icon::after {
-      width: 7px;
-      height: 7px;
+      //width: 7px;
+      //height: 7px;
     }
 
-    &__icon::before {
-      transform: translateY(-12px);
-    }
-
-    &__icon::after {
-      transform: translateY(12px);
-    }
 
     &__sideMenuWrap {
       top: $heightHeaderDesktop;
@@ -227,24 +240,17 @@
     }
 
     &__icon {
-      top: 18px;
-      right: 40px;
+      //top: 18px;
+      //right: 40px;
     }
 
     &__icon,
     &__icon::before,
     &__icon::after {
-      width: 5px;
-      height: 5px;
+      //width: 5px;
+      //height: 5px;
     }
 
-    &__icon::before {
-      transform: translateY(-8px);
-    }
-
-    &__icon::after {
-      transform: translateY(8px);
-    }
 
     &__sideMenuWrap {
       top: $heightHeaderPhone;
