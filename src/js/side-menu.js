@@ -21,7 +21,7 @@ iconWrap.addEventListener('click', () => {
 
         overlay.classList.add('invisible');
 
-        menuWrap.style.right = '-370px';
+        menuWrap.style.right = '-100vw';
 
         document.body.style.overflow = '';
     }

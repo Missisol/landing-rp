@@ -75,11 +75,19 @@ h6 {
   .container-min {
     max-width: $widthFullTablet;
   }
+
+  .overlay {
+    top: $heightHeaderDesktop;
+  }
 }
 @include phone() {
   .container,
   .container-min {
-    max-width: $widthContainerPhone;
+    max-width: $widthFullPhone;
+  }
+
+  .overlay {
+    top: $heightHeaderPhone;
   }
 }
 
@@ -89,7 +97,6 @@ h6 {
   background: rgba(0, 0, 0, 0.3);
   width: 100vw;
   height: 100vh;
-  top: $heightHeaderDesktop;
   left: 0;
 }
 

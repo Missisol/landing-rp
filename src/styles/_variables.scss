@@ -138,7 +138,6 @@ $colorError: #CA2F03;
 }
 
 @mixin decorativeTitleTablet {
-  color: rgba(175, 175, 175, 0.3);
-  filter: blur(1px);
+  color: $colorTextLight;
 }
 

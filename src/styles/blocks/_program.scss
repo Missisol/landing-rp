@@ -234,7 +234,6 @@
   }
 
   .program {
-    height: 625px;
 
     &__image_desktop {
       display: none;
@@ -242,7 +241,7 @@
 
     &__formWrap {
       width: 100%;
-      padding: 40px 0 35px;
+      padding: 40px 10% 35px;
     }
 
     &__formTitle {
@@ -253,24 +252,24 @@
     }
 
     &__formSubtitle {
-      margin-bottom: 50px;
+      margin-bottom: 30px;
       font-size: 18px;
+      line-height: 23px;
     }
 
     &__label {
-      width: $widthContainerPhone;
-    }
-
-    &__label {
-      margin-bottom: 23px;
+      margin-bottom: 30px;
+      width: 100%;
     }
 
     &__checkboxLabel {
-      margin-bottom: 66px;
+      margin-bottom: 30px;
+      line-height: 24px;
     }
 
     &__submit {
-      @include button(200px, 45px, $colorButtonLightGreen)
+      @include button(200px, 45px, $colorButtonLightGreen);
+      align-self: center;
     }
 
     &__field-name {

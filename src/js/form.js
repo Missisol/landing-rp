@@ -245,21 +245,13 @@
 // ];
 // const formSelectorFooter1 = '#form-1';
 // const btnSubmitSelectorFooter1 = '#submit-1';
-// const formSelectorFooter2 = '#form-2';
-// const btnSubmitSelectorFooter2 = '#submit-2';
-// const formSelectorFooter3 = '#form-3';
-// const btnSubmitSelectorFooter3 = '#submit-3';
 //
 // const sendProgram = new SubmitForm(api, inputs, formSelectorProgram, btnSubmitSelectorProgram);
 // const sendFooter1 = new SubmitForm(api, inputsFooter, formSelectorFooter1, btnSubmitSelectorFooter1);
-// const sendFooter2 = new SubmitForm(api, inputsFooter, formSelectorFooter2, btnSubmitSelectorFooter2);
-// const sendFooter3 = new SubmitForm(api, inputsFooter, formSelectorFooter3, btnSubmitSelectorFooter3);
 //
 //
 // const btnProgram = document.querySelector('#program');
 // const btnFooter1 = document.querySelector('#submit-1');
-// const btnFooter2 = document.querySelector('#submit-2');
-// const btnFooter3 = document.querySelector('#submit-3');
 //
 // btnProgram.addEventListener('click', () => {
 //     sendProgram.init();
@@ -268,15 +260,6 @@
 // btnFooter1.addEventListener('click', () => {
 //     sendFooter1.init();
 // });
-//
-// btnFooter2.addEventListener('click', () => {
-//     sendFooter2.init();
-// });
-//
-// btnFooter3.addEventListener('click', () => {
-//     sendFooter3.init();
-// });
-//
 //
 //
 //

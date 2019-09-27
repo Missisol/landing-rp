@@ -206,11 +206,12 @@
 
 @include phone() {
   .offersWrap {
-    height: 2496px;
+    background: $colorBackgroundLightMilk;
   }
 
   .offers {
     padding: 6px 0;
+    width: 90%;
 
     &__blockLeft,
     &__blockRight,
@@ -232,10 +233,9 @@
       flex-direction: column;
       justify-content: space-between;
       max-width: 328px;
-      height: 535px;
       padding: 17px;
       background: $colorBackgroundLightMilk;
-      margin-bottom: 46px;
+      //margin-bottom: 30px;
     }
 
     &__card,
@@ -268,6 +268,17 @@
 
     &__cardLink {
       color: $colorTextLight;
+      margin-bottom: 10px;
+    }
+
+    &__cardLink,
+    &__image {
+      align-self: center;
+    }
+
+    &__image {
+      min-width: 100%;
+      margin-bottom: 2em;
     }
 
     &__button_phone {
@@ -280,7 +291,7 @@
 
     &__decorativeTitle {
       @include decorativeTitleTablet;
-      margin-bottom: 20px;
+      margin-top: 20px;
 
       &_desktop {
         display: none;
@@ -291,7 +302,7 @@
       background: url(../assets/images/offers/card-ph-4.jpg) no-repeat;
       background-size: cover;
       height: 667px;
-      width: $widthFullPhone;
+      width: 100%;
       margin: 0 auto;
       display: flex;
       flex-direction: column;

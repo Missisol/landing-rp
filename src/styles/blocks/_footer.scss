@@ -299,12 +299,15 @@
 @include phone() {
   .footerWrap {
     position: relative;
+    box-shadow: none;
   }
 
   .footer {
     $height: 625px;
+    background: $colorBackgroundLightBlue;
+    padding-bottom: 2em;
 
-    box-shadow: 0 5px 35px rgba(0, 0, 0, 0.2);
+    //box-shadow: 0 5px 35px rgba(0, 0, 0, 0.2);
 
 
     &__map_desktop,
@@ -318,7 +321,7 @@
 
     &__formWrap,
     &__contacts {
-      width: $widthContainerPhone;
+      //width: $widthContainerPhone;
       margin: 0 auto;
     }
 
@@ -328,22 +331,13 @@
       top: 0;
       left: 0;
       padding: 24px 13px 0;
+      background: $colorBackgroundLightMilk;
     }
 
     &__contacts {
       background: $colorBackgroundLightBlue;
       padding: 13px;
     }
-
-    //&__content {
-    //  margin-top: $height;
-    //  flex-direction: column;
-    //}
-    //
-    //&__left {
-    //  width: 100%;
-    //  padding: 13px;
-    //}
 
     &__addressTitle,
     &__addressText {
@@ -396,10 +390,6 @@
     &__formBottom {
       display: flex;
       flex-direction: column;
-    }
-
-    &__label {
-      width: $widthContainerPhone - 2 * 13px;
     }
 
     &__checkboxLabel {

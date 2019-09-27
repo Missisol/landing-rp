@@ -136,7 +136,9 @@
 
 @include phone() {
   .advantagesWrap {
-    height: 1560px;
+        //height: 1700px;
+    //background: url(../assets/images/advantages/back-ph.jpg) 0 100% no-repeat;
+    //background-size: contain;
   }
 
   .advantages {
@@ -144,11 +146,10 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 0 24px;
-    background: url(../assets/images/advantages/back-t.jpg) 0 100% no-repeat;
-    background-size: contain;
+    //padding: 0 24px;
 
-    &__cardWrap_desktop {
+    &__cardWrap_desktop,
+    &__miniCardWrap  {
       display: none;
     }
 
@@ -158,8 +159,12 @@
       justify-content: space-between;
     }
 
+    &__miniCardPhone {
+      //height: 1210px;
+    }
+
     &__card {
-      padding: 48px 22px;
+      padding: 22px 10% 22px 12%;
       background: $colorBackgroundLightMilk;
       box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
       margin-bottom: 20px;
@@ -175,16 +180,22 @@
 
     &__linkCatalog {
       color: #CA2F03;
-      margin-bottom: 180px;
+      margin-bottom: 20px;
+      text-align: center;
     }
 
     &__decorativeTitle {
       @include decorativeTitleTablet;
       text-align: center;
+      line-height: 74px;
 
       &_desktop {
         display: none;
       }
+    }
+
+    &__bcgImage {
+      width: 100%;
     }
   }
 }
