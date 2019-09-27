@@ -358,6 +358,10 @@
       flex-direction: column;
     }
 
+    &__formRight {
+      margin-top: 20px;
+    }
+
     &__formTitle {
       font-weight: 400;
       margin-bottom: 20px;
@@ -376,6 +380,7 @@
     &__textarea {
       //height: 118px;
       margin-bottom: 20px;
+      height: 6em;
     }
 
     &__textarea::placeholder {
