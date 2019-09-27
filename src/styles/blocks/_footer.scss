@@ -85,6 +85,13 @@
   &__iconLink {
     margin-right: 10px;
   }
+
+  &__error {
+    position: absolute;
+    font-size: 14px;
+    font-weight: 300;
+    color: $colorError;
+  }
 }
 
 .footer__input_checkboxInput:checked + label.footer__checkboxLabel:before {

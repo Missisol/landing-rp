@@ -27,15 +27,16 @@
             </symbol>
         </svg>
         <header class="header">
+            <div id="overlay" class="overlay invisible"></div>
             <div class="header__wrap">
                 <img src="assets/images/header/logo.png" alt="logo" class="header__logo header__logo_desktop">
                 <img src="assets/images/header/logo-ph.png" alt="logo" class="header__logo header__logo_phone">
                 <nav class="header__menuWrap">
-                    <a class="header__link" href="#">О компании</a>
-                    <a class="header__link" href="#">Приемущества</a>
-                    <a class="header__link" href="#">Стать партнером</a>
-                    <a class="header__link" href="#">Галерея</a>
-                    <a class="header__link" href="#">Контакты</a>
+                    <a class="header__link anchor" href="#about">О компании</a>
+                    <a class="header__link anchor" href="#advantages">Приемущества</a>
+                    <a class="header__link anchor" href="#partners">Стать партнером</a>
+                    <a class="header__link anchor" href="#gallery">Галерея</a>
+                    <a class="header__link anchor" href="#contacts">Контакты</a>
                 </nav>
                 <div class="header__phone">8-800-550-36-56</div>
             </div>
@@ -43,18 +44,18 @@
                 <span id="icon" class="header__icon"></span>
                 <div id="sideMenuWrap" class="header__sideMenuWrap invisible">
                     <nav class="header__sideMenu">
-                        <a class="header__link header__link_side" href="#">О компании</a>
-                        <a class="header__link header__link_side" href="#">Приемущества</a>
-                        <a class="header__link header__link_side" href="#">Стать партнером</a>
-                        <a class="header__link header__link_side" href="#">Галерея</a>
-                        <a class="header__link header__link_side" href="#">Контакты</a>
+                        <a class="header__link header__link_side anchor" href="#about">О компании</a>
+                        <a class="header__link header__link_side anchor" href="#advantages">Приемущества</a>
+                        <a class="header__link header__link_side anchor" href="#partners">Стать партнером</a>
+                        <a class="header__link header__link_side anchor" href="#gallery">Галерея</a>
+                        <a class="header__link header__link_side anchor" href="#contacts">Контакты</a>
                     </nav>
                     <div class="header__phone header__phone_side">8-800-550-36-56</div>
                     <div class="header__phone header__phone_side">info@ricciresort.ru</div>
                 </div>
             </div>
         </header>
-        <section class="main">
+        <section id="about" class="main">
             <div class="main__content">
                 <h1 class="main__title">
                     Забудьте все, что вы знали об уличной мебели раньше
@@ -73,7 +74,7 @@
                                 так же вы будете получать партнерское вознаграждение от суммы заказа.
                             </div>
                         </div>
-                        <a href="#" class="main__button">Стать партнером</a>
+                        <a href="#partners" class="main__button anchor">Стать партнером</a>
                     </div>
                 </div>
             </div>
@@ -239,7 +240,7 @@
             </div>
             <h1 class="offers__decorativeTitle offers__decorativeTitle_desktop">О компании</h1>
         </div>
-        <section class="advantagesWrap">
+        <section id="advantages" class="advantagesWrap">
             <div class="advantages container-min">
                 <div class="advantages__cardWrap advantages__cardWrap_desktop">
                     <section class="advantages__card">
@@ -306,7 +307,7 @@
             </div>
             <h1 class="advantages__decorativeTitle advantages__decorativeTitle_desktop">Преимущества</h1>
         </section>
-        <div class="programWrap">
+        <div id="partners" class="programWrap">
             <div class="programWrap__upperTitleWrap">
                 <h1 class="programWrap__decorativeTitle">Стать партнером</h1>
             </div>
@@ -319,17 +320,23 @@
                     <h3 class="program__formSubtitle">
                         Оставьте свои контактные данные и мы незамедлительно свяжемся с вами
                     </h3>
-                    <form action="#" method="post" name="program" class="program__form">
-                        <label class="program__label">
-                            <input type="text" name="progName" class="program__input" placeholder="Имя">
+                    <form action="#" method="post" name="programForm" id="programForm" class="program__form">
+                        <label class="program__label name-label">
+                            <input type="text" name="name" class="program__input"
+                                   placeholder="Имя" autocomplete="off">
                         </label>
-                        <label class="program__label">
-                            <input type="email" name="progEmail" class="program__input" placeholder="Электронная почта">
+                        <div class="program__error program__field-name"></div>
+                        <label class="program__label email-label">
+                            <input type="text" name="email" class="program__input"
+                                   placeholder="Электронная почта" autocomplete="off">
                         </label>
-                        <label class="program__label">
-                            <input type="text" name="progPhone" class="program__input" placeholder="Номер телефона">
+                        <div class="program__error program__field-email"></div>
+                        <label class="program__label phone-label">
+                            <input type="text" name="phone" class="program__input input-phone" id="phone"
+                                   placeholder="Номер телефона" autocomplete="off">
                         </label>
-                        <input type="checkbox" class="program__input program__input_checkboxInput" id="CheckboxInput">
+                        <div class="program__error program__field-phone"></div>
+                        <input type="checkbox" name="check" value="1" class="program__input program__input_checkboxInput" id="CheckboxInput">
                         <label class="program__checkboxLabel" for="CheckboxInput">
                             Хочу получить специальный прайс и каталог для партнеров
                         </label>
@@ -338,7 +345,7 @@
                 </div>
             </div>
         </div>
-        <div class="galleryWrap">
+        <div id="gallery" class="galleryWrap">
             <div class="gallery container">
                 <h1 class="gallery__decorativeTitle gallery__decorativeTitle_tablet">Галерея</h1>
                 <div class="gallery__wrap gallery__wrap_desktop">
@@ -365,7 +372,7 @@
             </div>
             <h1 class="gallery__decorativeTitle gallery__decorativeTitle_desktop">Галерея</h1>
         </div>
-        <div class="footerWrap">
+        <div id="contacts" class="footerWrap">
             <footer class="footer container-min footer_desktop">
                 <div class="footer__content">
                     <div class="footer__left">
@@ -393,10 +400,10 @@
                             </div>
                         </div>
                         <nav class="footer__menu">
-                            <a class="header__link footer__menuLink" href="#">О компании</a>
-                            <a class="header__link footer__menuLink" href="#">Приемущества</a>
-                            <a class="header__link footer__menuLink" href="#">Стать партнером</a>
-                            <a class="header__link footer__menuLink" href="#">Галерея</a>
+                            <a class="header__link footer__menuLink anchor" href="#about">О компании</a>
+                            <a class="header__link footer__menuLink anchor" href="#advantages">Приемущества</a>
+                            <a class="header__link footer__menuLink anchor" href="#partners">Стать партнером</a>
+                            <a class="header__link footer__menuLink anchor" href="#gallery">Галерея</a>
                         </nav>
                         <div class="footer__socialWrap">
                             <a href="#" class="footer__iconLink" target="_blank">
@@ -434,19 +441,24 @@
                     <div class="footer__subTitle">
                         Оставьте нам сообщение и получите ответы на все ваши вопросы в ближайшее время
                     </div>
-                    <form action="#" method="post" name="footerForm" class="footer__form footer__form_desktop">
+                    <form action="#" method="post" name="footerForm" id="form-1" class="footer__form footer__form_desktop">
                         <div class="footer__formLeft">
-                            <label class="program__label footer__label">
-                                <input type="text" name="footName" class="program__input" placeholder="Имя">
+                            <label class="program__label footer__label footer__field-name">
+                                <input type="text" name="name" class="program__input"
+                                       placeholder="Имя" autocomplete="off">
                             </label>
-                            <label class="program__label footer__label">
-                                <input type="email" name="footEmail" class="program__input"
-                                       placeholder="Электронная почта">
+                            <div class="footer__error program__field-name"></div>
+                            <label class="program__label footer__label footer__field-email">
+                                <input type="text" name="email" class="program__input"
+                                       placeholder="Электронная почта" autocomplete="off">
                             </label>
-                            <label class="program__label footer__label">
-                                <input type="text" name="footPhone" class="program__input" placeholder="Номер телефона">
+                            <div class="footer__error program__field-email"></div>
+                            <label class="program__label footer__label footer__field-phone">
+                                <input type="text" name="phone" class="program__input input-phone"
+                                       placeholder="Номер телефона" autocomplete="off" id="phone-1">
                             </label>
-                            <input type="checkbox"
+                            <div class="footer__error program__field-phone"></div>
+                            <input type="checkbox" name="check" value="1"
                                    class="program__input program__input_checkboxInput footer__input_checkboxInput"
                                    id="CheckboxInputFooter-1">
                             <label class="program__checkboxLabel footer__checkboxLabel" for="CheckboxInputFooter-1">
@@ -454,33 +466,38 @@
                             </label>
                         </div>
                         <div class="footer__formRight">
-                                <textarea class="footer__textarea footer__textarea_desktop" name="footText"
+                                <textarea class="footer__textarea footer__textarea_desktop" name="text"
                                           placeholder="Сообщение"></textarea>
-                            <button type="submit" id="footerSendDesktop" class="program__submit">Отправить</button>
+                            <button type="submit" id="submit-1" class="footer__submit program__submit">Отправить</button>
                         </div>
                     </form>
-                    <form action="#" method="post" name="footerForm" class="footer__form footer__form_tablet">
-                        <label class="program__label footer__label">
-                            <input type="text" name="footName" class="program__input" placeholder="Имя">
+                    <form action="#" method="post" name="footerForm" id="form-2" class="footer__form footer__form_tablet">
+                        <label class="program__label footer__label footer__field-name">
+                            <input type="text" name="name" class="program__input"
+                                   placeholder="Имя" autocomplete="off">
                         </label>
-                        <label class="program__label footer__label">
-                            <input type="email" name="footEmail" class="program__input"
-                                   placeholder="Электронная почта">
+                        <div class="footer__error program__field-name"></div>
+                        <label class="program__label footer__label footer__field-email">
+                            <input type="text" name="email" class="program__input"
+                                   placeholder="Электронная почта" autocomplete="off">
                         </label>
-                        <label class="program__label footer__label">
-                            <input type="text" name="footPhone" class="program__input" placeholder="Номер телефона">
+                        <div class="footer__error program__field-email"></div>
+                        <label class="program__label footer__label footer__field-phone">
+                            <input type="text" name="phone" class="program__input input-phone"
+                                   placeholder="Номер телефона" autocomplete="off" id="phone-2">
                         </label>
-                        <textarea class="footer__textarea footer__textarea" name="footText"
+                        <div class="footer__error program__field-phone"></div>
+                        <textarea class="footer__textarea footer__textarea" name="text"
                                   placeholder="Сообщение"></textarea>
                         <div class="footer__formBottom">
-                            <input type="checkbox"
+                            <input type="checkbox" name="check" value="1"
                                    class="program__input program__input_checkboxInput footer__input_checkboxInput"
                                    id="CheckboxInputFooter-2">
                             <label class="program__checkboxLabel footer__checkboxLabel_tablet"
                                    for="CheckboxInputFooter-2">
                                 <span class="footer__checkboxText">Я согласен на обработку  заполняемых мною данных </span>
                             </label>
-                            <button type="submit" id="footerSendTablet" class="program__submit">Отправить</button>
+                            <button type="submit" id="submit-2" class="footer__submit program__submit">Отправить</button>
                         </div>
                     </form>
                 </div>
@@ -491,28 +508,32 @@
                     <div class="footer__subTitle">
                         Оставьте нам сообщение и получите ответы на все ваши вопросы в ближайшее время
                     </div>
-                    <form action="#" method="post" name="footerForm" class="footer__form">
-                        <label class="program__label footer__label">
-                            <input type="text" name="footName" class="program__input" placeholder="Имя">
+                    <form action="#" method="post" name="footerForm" id="form-3" class="footer__form">
+                        <label class="program__label footer__label footer__field-name">
+                            <input type="text" name="name" class="program__input"
+                                   placeholder="Имя" autocomplete="off">
                         </label>
-                        <label class="program__label footer__label">
-                            <input type="email" name="footEmail" class="program__input"
-                                   placeholder="Электронная почта">
+                        <div class="footer__error program__field-name"></div>
+                        <label class="program__label footer__label footer__field-email">
+                            <input type="text" name="email" class="program__input"
+                                   placeholder="Электронная почта" autocomplete="off">
                         </label>
-                        <label class="program__label footer__label">
-                            <input type="text" name="footPhone" class="program__input" placeholder="Номер телефона">
+                        <div class="footer__error program__field-email"></div>
+                        <label class="program__label footer__label footer__field-phone">
+                            <input type="text" name="phone" class="program__input input-phone"
+                                   placeholder="Номер телефона" autocomplete="off" id="phone-3">
                         </label>
-                        <textarea class="footer__textarea footer__textarea" name="footText"
+                        <textarea class="footer__textarea footer__textarea" name="text"
                                   placeholder="Сообщение"></textarea>
                         <div class="footer__formBottom">
-                            <input type="checkbox"
+                            <input type="checkbox" name="check" value="1"
                                    class="program__input program__input_checkboxInput footer__input_checkboxInput"
                                    id="CheckboxInputFooter-3">
                             <label class="program__checkboxLabel footer__checkboxLabel_tablet"
                                    for="CheckboxInputFooter-3">
                                 <span class="footer__checkboxText">Я согласен на обработку  заполняемых мною данных </span>
                             </label>
-                            <button type="submit" id="footerSendPhone" class="program__submit">Отправить</button>
+                            <button type="submit" id="submit-3" class="footer__submit program__submit">Отправить</button>
                         </div>
                     </form>
                 </div>
@@ -559,9 +580,8 @@
         </div>
     </div>
 </div>
-<!--<div id="overlay" class="overlay invisible"></div>-->
 
-<!--<script src="assets/libs/imask.min.js"></script>-->
+<script src="assets/libs/imask.min.js"></script>
 <script src="js/bundle.min.js"></script>
 </body>
 </html>

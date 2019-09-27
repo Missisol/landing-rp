@@ -77,6 +77,7 @@ $colorTextLight: #9C9C9C;
 $colorTextWhite: #ffffff;
 $colorLightTitle: rgba(175, 175, 175, 0.3);
 $colorBorder: #C5C5C5;
+$colorError: #CA2F03;
 
 
 @mixin phone {
@@ -114,7 +115,7 @@ $colorBorder: #C5C5C5;
     box-shadow: none;
   }
 
-  &:active {
+  &:disabled {
   @include btn-color($btn-color);
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
     color: $colorTextWhite;

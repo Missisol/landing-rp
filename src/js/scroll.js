@@ -61,18 +61,18 @@ function smoothScroll(eID) {
 
 const menuAnchors = document.querySelectorAll('.anchor');
 
-// for (let menuAnchor of menuAnchors) {
-//     menuAnchor.addEventListener('click', (e) => {
-//         e.preventDefault();
-//
-//         const target = e.target;
-//         const id = target.getAttribute('href');
-//
-//         if (id !== '#') {
-//             smoothScroll(id);
-//         }
-//     })
-// }
+for (let menuAnchor of menuAnchors) {
+    menuAnchor.addEventListener('click', (e) => {
+        e.preventDefault();
+
+        const target = e.target;
+        const id = target.getAttribute('href');
+
+        if (id !== '#') {
+            smoothScroll(id);
+        }
+    })
+}
 
 
 
