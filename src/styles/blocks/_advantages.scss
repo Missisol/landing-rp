@@ -161,7 +161,8 @@
     }
 
     &__miniCardPhone {
-      //height: 1210px;
+      display: flex;
+      flex-direction: column;
     }
 
     &__card {
