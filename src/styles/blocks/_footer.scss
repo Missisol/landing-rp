@@ -251,20 +251,22 @@
     &__form {
       display: flex;
       flex-direction: column;
+    }
 
-      &_desktop {
-        display: none;
-      }
+    &__formLeft,
+    &__formRight {
+      display: flex;
+      flex-direction: column;
     }
 
     &__formTitle {
       font-weight: 400;
-      margin-bottom: 30px;
+      margin-bottom: 20px;
     }
 
     &__subTitle {
       font-size: 20px;
-      margin-bottom: 50px;
+      margin-bottom: 30px;
     }
 
     &__bottomTablet {
@@ -272,12 +274,12 @@
     }
 
     &__textarea {
-      height: 77px;
-      margin-bottom: 46px;
+      height: 123px;
+      margin-bottom: 30px;
     }
 
     &__textarea::placeholder {
-      padding-top: 48px;
+      padding-top: 94px;
     }
 
     &__formBottom {
@@ -288,8 +290,8 @@
       width: 506px;
     }
 
-    &__checkboxLabel_tablet {
-      margin-bottom: 0;
+    &__checkboxLabel {
+      margin-bottom: 20px;
     }
   }
 }
@@ -297,8 +299,6 @@
 @include phone() {
   .footerWrap {
     position: relative;
-
-    //height: 959px;
   }
 
   .footer {
@@ -312,7 +312,7 @@
     &__bottom,
     &__addressText_desktop,
     &__menu,
-    &_desktop {
+    &__content {
       display: none;
     }
 
@@ -327,7 +327,7 @@
       height: $height;
       top: 0;
       left: 0;
-      padding: 24px 0 0;
+      padding: 24px 13px 0;
     }
 
     &__contacts {
@@ -361,10 +361,12 @@
     &__form {
       display: flex;
       flex-direction: column;
+    }
 
-      //&_desktop {
-      //  display: none;
-      //}
+    &__formLeft,
+    &__formRight {
+      display: flex;
+      flex-direction: column;
     }
 
     &__formTitle {
@@ -383,12 +385,12 @@
     }
 
     &__textarea {
-      height: 77px;
-      margin-bottom: 46px;
+      height: 118px;
+      margin-bottom: 20px;
     }
 
     &__textarea::placeholder {
-      padding-top: 48px;
+      padding-top: 80px;
     }
 
     &__formBottom {
@@ -397,16 +399,21 @@
     }
 
     &__label {
-      width: $widthContainerPhone;
+      width: $widthContainerPhone - 2 * 13px;
     }
 
-    &__checkboxLabel_tablet {
+    &__checkboxLabel {
       margin-bottom: 0;
+      line-height: 16px;
     }
 
     &__map_phone {
       display: flex;
       justify-content: center;
+    }
+
+    &__submit {
+      align-self: center;
     }
   }
 }
