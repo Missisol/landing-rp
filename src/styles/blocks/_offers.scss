@@ -19,6 +19,10 @@
     flex-direction: column;
     width: 50%;
   }
+
+  &__title {
+    font-weight: 400;
+  }
 }
 
 @include desktop() {
