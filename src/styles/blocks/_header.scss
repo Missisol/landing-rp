@@ -156,10 +156,9 @@
 
     &__sideMenuWrap {
       top: $heightHeaderDesktop;
-      right: -100vw;
-      width: 100vw;
-      height: 100vh;
-      padding: 40px 107px;
+      right: -40vw;
+      height: 50vh;
+      padding: 40px 40px;
     }
 
     &__sideMenu {
@@ -237,8 +236,7 @@
 
     &__sideMenuWrap {
       top: $heightHeaderPhone;
-      right: -100vw;
-      width: 100vw;
+      right: -50vw;
       height: 100vh;
       padding: 40px 47px;
     }

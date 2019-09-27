@@ -180,9 +180,10 @@
     }
 
     &__linkCatalog {
+      @include button(200px, 50px, $colorBackgroundLightMilk)
       color: #CA2F03;
       margin-bottom: 20px;
-      text-align: center;
+      align-self: center;
     }
 
     &__decorativeTitle {
