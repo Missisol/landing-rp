@@ -1,10 +1,11 @@
-@import 'normalize';
+@import 'partials/normalize';
+@import 'partials/config';
 
-@import 'config';
 @import 'blocks/header';
-@import 'blocks/main-screen';
-@import 'blocks/offers';
+@import 'blocks/first-screen';
+@import 'blocks/cooperate';
 @import 'blocks/advantages';
-@import 'blocks/program';
-@import 'blocks/gallery';
+@import 'blocks/instagram';
+@import 'blocks/communication';
 @import 'blocks/footer';
+

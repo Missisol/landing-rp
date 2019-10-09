@@ -1,0 +1,114 @@
+@import 'variables';
+
+//Headers
+@mixin _h1 {
+  font-weight: 500;
+  font-size: $h1-font-size;
+  line-height: $h1-line-height;
+}
+
+@mixin _h2 {
+  font-weight: 400;
+  font-size: $h2-font-size;
+  line-height: $h2-line-height;
+}
+
+@mixin _h3 {
+  font-weight: 400;
+  font-size: $h3-font-size;
+  line-height: $h3-line-height;
+}
+
+@mixin _h4 {
+  font-weight: 400;
+  font-size: $h4-font-size;
+  line-height: $h3-line-height;
+}
+
+// Headers mobile
+@mixin _h1-mobile {
+  font-weight: 500;
+  font-size: $h1-mobile-font-size;
+  line-height: $h1-mobile-line-height;
+}
+
+@mixin _h2-mobile {
+  font-weight: 400;
+  font-size: $h2-mobile-font-size;
+  line-height: $h2-mobile-line-height;
+}
+
+@mixin _h3-mobile {
+  font-weight: 400;
+  font-size: $h3-mobile-font-size;
+  line-height: $h3-mobile-line-height;
+}
+
+// Base text
+@mixin base-text {
+  font-weight: 300;
+  font-size: $base-font-size;
+  line-height: $base-line-height;
+  color: $base-text-color;
+}
+
+//Light text
+@mixin light-text {
+  font-weight: 300;
+  font-size: $base-font-size;
+  line-height: $base-line-height;
+  color: $light-text-color;
+}
+
+//Menu text
+@mixin menu-text {
+  font-size: $base-font-size;
+  font-weight: 300;
+  color: $light-text-color;
+
+  &:hover {
+    color: $base-text-color;
+  }
+}
+
+//Button text
+@mixin btn-text {
+  font-size: $base-font-size;
+  font-weight: 500;
+  color: $text-white-color;
+}
+
+//Button
+@mixin btn {
+  @include btn-text;
+  padding: 14px 24px;
+  cursor: pointer;
+  background: $base-blue-color;
+
+  &:hover {
+    background: $hover-blue-color;
+  }
+
+  &:active {
+    background: $active-blue-color;
+  }
+}
+
+// Mixins for media
+@mixin desktop {
+  @media (min-width: #{$tablet-width+1px}) {
+    @content
+  }
+}
+
+@mixin tablet {
+  @media (max-width: #{$tablet-width}) {
+    @content
+  }
+}
+
+@mixin mobile {
+  @media (max-width: #{$mobile-width}) {
+    @content
+  }
+}

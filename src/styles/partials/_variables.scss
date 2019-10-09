@@ -1,0 +1,101 @@
+@font-face {
+  font-family: 'Roboto';
+  src: url(../../assets/fonts/Roboto-Regular.ttf);
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url(../../assets/fonts/Roboto-Light.ttf);
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url(../../assets/fonts/Roboto-Medium.ttf);
+  font-weight: 500;
+}
+
+//
+// Variables
+//
+// If you have an initialization partial (or equivalent), you should move these
+// lines to that file. NOTE: Edit the lines to remove "!default".
+
+// The font size set on the root html element.
+$base-font-size: 16px;
+
+// The base line height determines the basic unit of vertical rhythm.
+$base-line-height: 26px;
+
+// The length unit in which to output vertical rhythm values.
+// Supported values: px, em, rem.
+$base-unit: 'em' !default;
+
+// The default font family.
+$base-font-family: 'Roboto', sans-serif;
+
+// The amount lists and blockquotes are indented.
+$indent-amount: 40px !default;
+
+// The following variable controls whether normalize-scss will output
+// font-sizes, line-heights and block-level top/bottom margins that form a basic
+// vertical rhythm on the page, which differs from the original Normalize.css.
+// However, changing any of the variables above will cause
+// $normalize-vertical-rhythm to be automatically set to true.
+$normalize-vertical-rhythm: false !default;
+
+// The font sizes for h1-h6.
+$h1-font-size: 48px;
+$h2-font-size: 40px;
+$h3-font-size: 24px;
+$h4-font-size: 20px;
+
+// line heights
+$h1-line-height: 56px;
+$h2-line-height: 48px;
+$h3-line-height: 28px;
+$h4-line-height: 35px;
+
+// Mobile font sizes
+$h1-mobile-font-size: 34px;
+$h2-mobile-font-size: 24px;
+$h3-mobile-font-size: 20px;
+$mobile-menu-font-size: 20px;
+
+// Mobile line heights
+$h1-mobile-line-height: 45px;
+$h2-mobile-line-height: 28px;
+$h3-mobile-line-height: 30px;
+$base-mobile-line-height: 16px;
+
+//Breakpoints
+$desktop-width: 1440px;
+$tablet-width: 768px;
+$mobile-width: 375px;
+
+//Containers
+$desktop-container: 1170px;
+$phone-container: 343px;
+
+//Main colors
+$base-blue-color: #66C8DB;
+$hover-blue-color: #8FD4E1;
+$active-blue-color: #38A0B4;
+$form-background-color: #E6F4F7;
+$error-color: #CA2F03;
+
+//Text colors
+$text-white-color: #ffffff;
+$header-grey-color: #1A1B1D;
+$base-text-color: #333333;
+$light-text-color: #6C6C6C;
+
+//Icons colors
+$icon-blue-color: #13ACC7;
+$icon-base-grey-color: #13ACC7;
+$icon-active-grey-color: #282828;
+
+//
+$header-height: 60px;
+

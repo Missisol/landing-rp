@@ -1,0 +1,100 @@
+@import "variables";
+@import 'mixins';
+
+html,
+body {
+  height: 100%;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  display: block;
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+h1 {
+  font-weight: 400;
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 300;
+}
+
+input,
+textarea {
+  outline: none;
+}
+
+.big-wrap {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  font-size: $base-font-size;
+  font-weight: 300;
+}
+
+.content {
+  width: 100%;
+  margin: 0 auto;
+  flex: 1;
+}
+
+.container {
+  margin: 0 auto;
+}
+
+@include desktop() {
+  .container {
+    width: $desktop-container;
+  }
+};
+
+@include mobile() {
+  .container {
+    width: $phone-container;
+  }
+}
+
+.overlay {
+  position: absolute;
+  z-index: 400;
+  background: rgba(0, 0, 0, 0.3);
+  width: 100vw;
+  height: 100vh;
+  left: 0;
+  transition: 0.5s;
+}
+
+.invisible {
+  display: none;
+}
+
+svg path{
+  fill: inherit;
+  stroke: inherit;
+}
+
+
+

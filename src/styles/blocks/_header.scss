@@ -1,269 +1,30 @@
-@import '../variables';
+@import '../partials/mixins';
 
 .header {
-  width: 100%;
-  position: fixed;
-  z-index: 500;
-  background: $colorBackgroundLightMilk;
-  box-shadow: 0 5px 35px rgba(0, 0, 0, 0.2);
+  height: $header-height;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 
-  &__wrap {
-    position: relative;
-    height: 100%;
-    margin: 0 auto;
+  &__menu {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    height: 100%;
   }
 
-  &__menuWrap {
-    display: flex;
-    flex: 1;
-    justify-content: space-between;
-    padding: 0 124px;
-    height: 100%;
-    align-items: center;
+  &__link-wrap {
+    padding-left: 2.3em;
+    padding-right: 2.3em;
+    height: 3em;
+    line-height: 3em;
   }
 
   &__link {
-    display: block;
-    color: $colorText;
-    transition: all .3s ease;
-  }
-
-  &__link:hover {
-    color: $colorTextLight;
+    @include menu-text;
   }
 
   &__phone {
-    text-align: center;
-  }
-
-  &__icon,
-  &__icon::before,
-  &__icon::after {
-    position: absolute;
-    background: $colorText;
-    top: 50%;
-    margin-top: -1px;
-    left: 50%;
-    margin-left: -10px;
-    width: 20px;
-    height: 2px;
-  }
-
-  &__icon::before,
-  &__icon::after {
-    content: '';
-    display: block;
-    transition: 0.2s;
-  }
-
-  &__sideMenuWrap {
-    position: absolute;
-    z-index: 450;
-    background: $colorBackgroundLightMilk;
-    box-shadow: 0 5px 35px rgba(0, 0, 0, 0.2);
-    display: flex;
-    flex-direction: column;
-    transition: right 0.5s ease-out;
-  }
-
-  &__icon::before {
-    transform: translateY(-6px);
-  }
-
-  &__icon::after {
-    transform: translateY(6px);
-  }
-}
-
-#iconWrap.active #icon {
-  height: 0;
-}
-
-#iconWrap.active #icon::before {
-  transform: rotate(-45deg);
-}
-
-#iconWrap.active #icon::after {
-  transform: rotate(45deg);
-}
-
-@include desktop() {
-  .header {
-    height: $heightHeaderDesktop;
-
-    &__sideMenuWrap {
-      display: none;
-    }
-
-    &__wrap {
-      max-width: $widthFullDesktop;
-      font-size: 16px;
-      padding: 0 10px;
-    }
-
-    &__logo_phone {
-      display: none;
-    }
-
-    &__link {
-      height: 2 * $heightHeaderDesktop / 3;
-      line-height: 2 * $heightHeaderDesktop / 3;
-    }
-
-    &__phone {
-      width: 223px;
-      height: 100%;
-      line-height: $heightHeaderDesktop;
-      background: $colorBackgroundLightGrey;
-      font-weight: 400;
-    }
-
-    &__icon {
-      display: none;
-    }
-  }
-}
-
-@include tablet() {
-  .header {
-    width: 100%;
-    height: $heightHeaderDesktop;
-
-    &__wrap {
-      max-width: 676px;
-    }
-
-    &__logo_phone {
-      display: none;
-    }
-
-    &__menuWrap {
-      display: none;
-    }
-
-    &__phone {
-      font-size: 20px;
-
-      &_sideMenu {
-        margin-top: 60px;
-      }
-    }
-
-    &__menuIconWrap {
-      position: absolute;
-      top: 0;
-      right: 0;
-      height: 100%;
-      width: 100px;
-    }
-
-    &__icon {
-      //top: 26px;
-      //right: 40px;
-    }
-
-    &__icon,
-    &__icon::before,
-    &__icon::after {
-      //width: 7px;
-      //height: 7px;
-    }
-
-
-    &__sideMenuWrap {
-      top: $heightHeaderDesktop;
-      right: -100vw;
-      //height: 50vh;
-      padding: 40px 40px;
-    }
-
-    //&__sideMenu {
-    //  margin-bottom: 400px;
-    //}
-
-    &__link_side {
-      margin-bottom: 40px;
-    }
-
-    &__phone {
-
-      &_side {
-        text-align: left;
-        margin-bottom: 40px;
-      }
-    }
-  }
-}
-
-@include phone() {
-  .header {
-    height: $heightHeaderPhone;
-
-    &__wrap {
-      max-width: $widthFullPhone;
-    }
-
-    &__logo {
-
-      &_desktop {
-        display: none;
-      }
-    }
-
-    &__menuWrap {
-      display: none;
-    }
-
-    &__phone {
-      display: none;
-
-      &_side {
-        text-align: left;
-        display: block;
-        margin-bottom: 20px;
-      }
-
-      &_sideMenu {
-        margin-top: 40px;
-      }
-    }
-
-    &__menuIconWrap {
-      position: absolute;
-      top: 0;
-      right: 0;
-      height: 100%;
-      width: 100px;
-    }
-
-    &__icon {
-      //top: 18px;
-      //right: 40px;
-    }
-
-    &__icon,
-    &__icon::before,
-    &__icon::after {
-      //width: 5px;
-      //height: 5px;
-    }
-
-
-    &__sideMenuWrap {
-      top: $heightHeaderPhone;
-      right: -100vw;
-      padding: 40px 47px;
-    }
-
-    //&__sideMenu {
-    //  margin-bottom: 240px;
-    //}
-
-    &__link_side {
-      margin-bottom: 20px;
-    }
+    color: $light-text-color;
   }
 }

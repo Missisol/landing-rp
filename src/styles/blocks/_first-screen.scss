@@ -1,0 +1,31 @@
+@import '../partials/mixins';
+
+.first {
+  height: 580px;
+  background: url(../assets/images/first-screen/first.jpg) no-repeat;
+  background-size: cover;
+
+  &__content {
+    height: 100%;
+    padding: 130px 0 190px;
+    color: $text-white-color;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+
+  &__title {
+    @include _h1;
+    max-width: 75%;
+  }
+
+  &__subtitle {
+    @include _h4;
+    max-width: 50%;
+  }
+
+  &__button {
+    @include btn;
+  }
+}
