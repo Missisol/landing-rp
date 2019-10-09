@@ -7,6 +7,12 @@
   line-height: $h1-line-height;
 }
 
+@mixin _h1-light {
+  font-weight: 300;
+  font-size: $h1-font-size;
+  line-height: $h1-line-height;
+}
+
 @mixin _h2 {
   font-weight: 400;
   font-size: $h2-font-size;

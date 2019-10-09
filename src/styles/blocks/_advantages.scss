@@ -1,0 +1,72 @@
+@import '../partials/mixins';
+
+$height-desktop: 105em;
+
+.advantages {
+  position: relative;
+  height: $height-desktop;
+
+  &__absolute {
+    position: absolute;
+    z-index: -10;
+    height: $height-desktop / 3;
+    width: 50%;
+
+    &_first {
+      top: 0;
+      left: 50%;
+      background: url(../assets/images/advantages/adv-1.jpg) no-repeat;
+      background-size: cover;
+    }
+
+    &_second {
+      top: $height-desktop / 3;
+      right: 50%;
+      background: url(../assets/images/advantages/adv-2.jpg) no-repeat;
+      background-size: cover;
+    }
+
+    &_third {
+      top: $height-desktop * 2/ 3;
+      left: 50%;
+      background: url(../assets/images/advantages/adv-3.jpg) no-repeat;
+      background-size: cover;
+    }
+  }
+
+  &__item-wrap {
+    height: $height-desktop / 3;
+    display: flex;
+
+    &_second {
+      justify-content: flex-end;
+    }
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    height: 100%;
+    width: 50%;
+    padding: 10em 7em 9em 0;
+
+    &_second {
+      padding: 10em 7em 9em;
+    }
+  }
+
+  &__title {
+    @include _h1-light;
+    margin-bottom: $margin-step * 2;
+  }
+
+  &__text {
+    @include base-text;
+    margin-bottom: $margin-step * 2;
+  }
+
+  &__button {
+    @include btn;
+  }
+}

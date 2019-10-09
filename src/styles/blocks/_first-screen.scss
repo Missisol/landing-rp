@@ -1,13 +1,14 @@
 @import '../partials/mixins';
 
 .first {
-  height: 580px;
+  height: 36.25em;
   background: url(../assets/images/first-screen/first.jpg) no-repeat;
   background-size: cover;
 
   &__content {
     height: 100%;
-    padding: 130px 0 190px;
+    padding: 8em 0 11em;
+    //padding: 130px 0 190px;
     color: $text-white-color;
     display: flex;
     flex-direction: column;

@@ -1,0 +1,28 @@
+@import '../partials/mixins';
+
+.instagram {
+  height: 36em;
+  padding: 6em 0 8.5em;
+
+  &__wrap {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__item {
+    position: relative;
+    width: 23%;
+  }
+
+  &__title {
+    @include _h1-light;
+    text-align: center;
+    margin-bottom: $margin-step * 2;
+  }
+
+  &__icon {
+    position: absolute;
+    bottom: $margin-step;
+    right: $margin-step;
+  }
+}

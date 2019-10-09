@@ -1,5 +1,7 @@
 @import '../partials/mixins';
 
+$header-height: 3.75em;
+
 .header {
   height: $header-height;
   display: flex;
