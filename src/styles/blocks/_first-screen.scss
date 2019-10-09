@@ -1,7 +1,6 @@
 @import '../partials/mixins';
 
 .first {
-  height: 36.25em;
   background: url(../assets/images/first-screen/first.jpg) no-repeat;
   background-size: cover;
 
@@ -29,4 +28,21 @@
   &__button {
     @include btn;
   }
+}
+
+@include desktop() {
+  .first {
+    height: 36.25em;
+  }
+}
+
+@include tablet() {
+  .container-tablet  {
+    width: 580px;
+  }
+
+  .first {
+    height: 40em;
+  }
+
 }

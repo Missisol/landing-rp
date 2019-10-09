@@ -71,7 +71,13 @@ textarea {
   }
 };
 
-@include mobile() {
+@include tablet() {
+  .container {
+    width: $tablet-container;
+  }
+}
+
+@include phone() {
   .container {
     width: $phone-container;
   }

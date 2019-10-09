@@ -16,8 +16,6 @@ $header-height: 3.75em;
   }
 
   &__link-wrap {
-    padding-left: 2.3em;
-    padding-right: 2.3em;
     height: 3em;
     line-height: 3em;
   }
@@ -28,5 +26,28 @@ $header-height: 3.75em;
 
   &__phone {
     color: $light-text-color;
+  }
+}
+
+@include desktop() {
+  .header {
+
+    &__link-wrap {
+      padding-left: 2.3em;
+      padding-right: 2.3em;
+    }
+  }
+}
+
+@include tablet() {
+  .header {
+
+    &__phone {
+      display: none;
+    }
+
+    &__link-wrap {
+      padding-left: 2.2em;
+    }
   }
 }
