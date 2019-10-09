@@ -1,0 +1,60 @@
+@import '../partials/mixins';
+
+
+.footer {
+  height: 13.5em;
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3.6em 0 2.5em;
+    border-bottom: 1px solid $footer-border-color;
+  }
+
+  &__phone {
+    @include _h2;
+  }
+
+  &__email {
+    @include _h2;
+    color: $icon-blue-color;
+  }
+
+  &__address {
+    @include light-text;
+    flex-basis: 11.2em;
+  }
+
+  &__copy {
+    font-size: $mini-font-size;
+    color: $light-text-color;
+  }
+
+  &__policy {
+    color: $base-text-color;
+  }
+
+  &__bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: $margin-step * 2;
+  }
+
+  &__social {
+    display: flex;
+  }
+
+  &__social-icon {
+    margin-left: 16px;
+
+    &:hover .footer__icon {
+      fill: $icon-hover-grey-color;
+    }
+  }
+
+  &__icon {
+    fill: $icon-base-grey-color;
+  }
+}

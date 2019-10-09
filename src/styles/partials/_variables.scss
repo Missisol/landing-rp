@@ -45,11 +45,12 @@ $indent-amount: 40px !default;
 // $normalize-vertical-rhythm to be automatically set to true.
 $normalize-vertical-rhythm: false !default;
 
-// The font sizes for h1-h6.
+// The font sizes
 $h1-font-size: 48px;
 $h2-font-size: 40px;
 $h3-font-size: 24px;
 $h4-font-size: 20px;
+$mini-font-size: 14px;
 
 // line heights
 $h1-line-height: 56px;
@@ -82,7 +83,6 @@ $phone-container: 343px;
 $base-blue-color: #66C8DB;
 $hover-blue-color: #8FD4E1;
 $active-blue-color: #38A0B4;
-$form-background-color: #E6F4F7;
 $error-color: #CA2F03;
 
 //Text colors
@@ -93,8 +93,13 @@ $light-text-color: #6C6C6C;
 
 //Icons colors
 $icon-blue-color: #13ACC7;
-$icon-base-grey-color: #13ACC7;
-$icon-active-grey-color: #282828;
+$icon-base-grey-color: #6E7174;
+$icon-hover-grey-color: #282828;
+
+//Form colors
+$form-background-color: #E6F4F7;
+$input-border-color: rgba(108, 108, 108, 0.5);
+$footer-border-color: #DFE8ED;
 
 //
 $margin-step: 12px;

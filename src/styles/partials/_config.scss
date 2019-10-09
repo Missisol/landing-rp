@@ -67,13 +67,13 @@ textarea {
 
 @include desktop() {
   .container {
-    max-width: $desktop-container;
+    width: $desktop-container;
   }
 };
 
 @include mobile() {
   .container {
-    max-width: $phone-container;
+    width: $phone-container;
   }
 }
 

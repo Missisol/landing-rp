@@ -16,11 +16,13 @@
     <div class="content">
         <header class="header container">
             <img src="assets/images/header/logo.svg" alt="logo" class="header__logo">
-            <nav class="header__menu">
-                <div class="header__link-wrap"><a href="#" class="header__link">Преимущества</a></div>
-                <div class="header__link-wrap"><a href="#" class="header__link">Галерея</a></div>
-                <div class="header__link-wrap"><a href="#" class="header__link">Стать партнером</a></div>
-                <div class="header__link-wrap"><a href="#" class="header__link">Контакты</a></div>
+            <nav>
+                <ul class="header__menu">
+                    <li class="header__link-wrap"><a href="#" class="header__link">Преимущества</a></li>
+                    <li class="header__link-wrap"><a href="#" class="header__link">Галерея</a></li>
+                    <li class="header__link-wrap"><a href="#" class="header__link">Стать партнером</a></li>
+                    <li class="header__link-wrap"><a href="#" class="header__link">Контакты</a></li>
+                </ul>
             </nav>
             <div class="header__phone">8 800 550-36-56</div>
         </header>
@@ -39,7 +41,7 @@
         <section class="cooperate container">
             <div class="cooperate__item">
                 <img src="assets/images/cooperate/goods.svg" alt="goods" class="cooperate__icon">
-                <div class="cooperate__title">Владельцам магазинов</div>
+                <h3 class="cooperate__title">Владельцам магазинов</h3>
                 <div class="cooperate__text">
                     Тесная коммуникация с каждым партнером, мы помогуем нашим партнерам
                     консультируя и предоставляя свой Шоурум для показа образцов.
@@ -47,7 +49,7 @@
             </div>
             <div class="cooperate__item">
                 <img src="assets/images/cooperate/design.svg" alt="design" class="cooperate__icon">
-                <div class="cooperate__title">Дизайнерам</div>
+                <h3 class="cooperate__title">Дизайнерам</h3>
                 <div class="cooperate__text">
                     Дизайнерам предоставляются 3d модели необходимых экземпляров мебели. Мы готовы
                     работать как с частными дизайнерами, так и с дизайнерскими студиями, которые
@@ -56,7 +58,7 @@
             </div>
             <div class="cooperate__item">
                 <img src="assets/images/cooperate/rouble.svg" alt="rouble" class="cooperate__icon">
-                <div class="cooperate__title">Торговым представителям</div>
+                <h3 class="cooperate__title">Торговым представителям</h3>
                 <div class="cooperate__text">
                     При необходимости партнер имеет возможность делать свою наценку и это никак не
                     влияет на размеры партнерского вознаграждения, вся наценка остается партнеру.
@@ -69,7 +71,7 @@
             <div class="advantages__absolute advantages__absolute_third"></div>
             <div class="advantages__item-wrap advantages__item-wrap_first container">
                 <section class="advantages__item advantages__item_first">
-                    <div class="advantages__title">Сотрудничество</div>
+                    <h1 class="advantages__title">Сотрудничество</h1>
                     <div class="advantages__text">
                         Слово сотрудничество может обретать совершенно разные образы,
                         и мы вам предлагаем не простое заключение договора, а становимся с
@@ -80,7 +82,7 @@
             </div>
             <div class="advantages__item-wrap advantages__item-wrap_second container">
                 <section class="advantages__item advantages__item_second">
-                    <div class="advantages__title">Брендирование</div>
+                    <h1 class="advantages__title">Брендирование</h1>
                     <div class="advantages__text">
                         Наша компания предлагает вам услуги по
                         брендированию. Многочисленными исследованиями доказано, что
@@ -91,7 +93,7 @@
             </div>
             <div class="advantages__item-wrap advantages__item-wrap_third container">
                 <section class="advantages__item advantages__item_third">
-                    <div class="advantages__title">Ассортимент</div>
+                    <h1 class="advantages__title">Ассортимент</h1>
                     <div class="advantages__text">
                         Уличные ткани могут быть очень яркими или спокойными, с фактурой
                         или гладкими, однотонными или с рисунком. У нас большой выбор.
@@ -102,7 +104,7 @@
             </div>
         </div>
         <div class="instagram container">
-            <div class="instagram__title">Instagram</div>
+            <h1 class="instagram__title">Instagram</h1>
             <div class="instagram__wrap">
                 <div class="instagram__item">
                     <img src="assets/images/instagram/insta-1.jpg" alt="instagram-1" class="instagram__image">
@@ -131,9 +133,86 @@
 
             </div>
         </div>
-        <section class="communication"></section>
+        <section class="communication">
+            <img src="assets/images/communication/heater.png" alt="heater" class="communication__image">
+            <div class="communication__form-container container">
+                <h1 class="communication__title">Начать сотрудничество</h1>
+                <div class="communication__text">
+                    Оставьте свои контактные данные и мы ответим на любые ваши вопросы
+                </div>
+                <form action="#" method="POST" name="communication" class="communication__form">
+                    <label class="communication__label">
+                        <input type="text" name="username" autocomplete="off"
+                               class="communication__input" placeholder="Как к вам обращаться?">
+                    </label>
+                    <div class="communication__error communication__error_username"></div>
+                    <label class="communication__label">
+                        <input type="text" name="email" autocomplete="off"
+                               class="communication__input" placeholder="Электронная почта">
+                    </label>
+                    <div class="communication__error communication__error_email"></div>
+                    <label class="communication__label">
+                        <input type="text" name="phone" autocomplete="off"
+                               class="communication__input" placeholder="Телефон">
+                    </label>
+                    <div class="communication__error communication__error_phone"></div>
+                    <input type="checkbox" name="check" value="1"
+                           class="communication__input communication__input_checkbox"
+                           id="checkbox">
+                    <label class="communication__label-checkbox" for="checkbox">
+                        <span class="communication__text-checkbox">Хочу получить специальный прайс и каталог для партнеров</span>
+                    </label>
+                    <div class="communication__wrap">
+                        <a href="#" type="submit" class="communication__button">Отправить</a>
+                        <div class="communication__send">
+                            Нажимая на кнопку «Отправить» вы соглашаетесь
+                            на обработку ваших персональных данных
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </section>
     </div>
-    <footer class="footer"></footer>
+    <svg display="none">
+        <symbol id="instagram" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <g opacity="0.5">
+                <path d="M16.5 0H7.5C3.3585 0 0 3.3585 0 7.5V16.5C0 20.6415 3.3585 24 7.5 24H16.5C20.6415 24 24 20.6415 24 16.5V7.5C24 3.3585 20.6415 0 16.5 0ZM21.75 16.5C21.75 19.395 19.395 21.75 16.5 21.75H7.5C4.605 21.75 2.25 19.395 2.25 16.5V7.5C2.25 4.605 4.605 2.25 7.5 2.25H16.5C19.395 2.25 21.75 4.605 21.75 7.5V16.5Z"
+                      fill="#6E7174"/>
+                <path d="M12 6C8.6865 6 6 8.6865 6 12C6 15.3135 8.6865 18 12 18C15.3135 18 18 15.3135 18 12C18 8.6865 15.3135 6 12 6ZM12 15.75C9.933 15.75 8.25 14.067 8.25 12C8.25 9.9315 9.933 8.25 12 8.25C14.067 8.25 15.75 9.9315 15.75 12C15.75 14.067 14.067 15.75 12 15.75Z"
+                      fill="#6E7174"/>
+                <path d="M18.4496 6.34949C18.8911 6.34949 19.2491 5.99154 19.2491 5.54999C19.2491 5.10844 18.8911 4.75049 18.4496 4.75049C18.008 4.75049 17.6501 5.10844 17.6501 5.54999C17.6501 5.99154 18.008 6.34949 18.4496 6.34949Z"
+                      fill="#6E7174"/>
+            </g>
+        </symbol>
+    </svg>
+    <svg display="none">
+        <symbol id="facebook" viewBox="0 0 29 29" xmlns="http://www.w3.org/2000/svg">
+            <g opacity="0.5">
+                <path d="M5.29523 0C2.3619 0 0 2.3619 0 5.29523V23.7048C0 26.6381 2.3619 29 5.29523 29H15.2731V17.6628H12.2752V13.5811H15.2731V10.0938C15.2731 7.35405 17.0443 4.83848 21.1247 4.83848C22.7768 4.83848 23.9984 4.99708 23.9984 4.99708L23.9023 8.80878C23.9023 8.80878 22.6564 8.79701 21.2969 8.79701C19.8254 8.79701 19.5895 9.47497 19.5895 10.6005V13.5811H24.0192L23.8262 17.6629H19.5895V29.0001H23.7048C26.6381 29.0001 29 26.6382 29 23.7048V5.29526C29 2.36193 26.6381 2.9e-05 23.7048 2.9e-05H5.2952L5.29523 0Z" fill="#6E7174"/>
+            </g>
+        </symbol>
+    </svg>
+    <footer class="footer container">
+        <div class="footer__top">
+            <h2 class="footer__phone">8-800-550-36-56</h2>
+            <h2 class="footer__email">info@ricciresort.ru</h2>
+            <div class="footer__address">
+                Краснодар, ул. Красных Партизан, дом 218
+            </div>
+        </div>
+        <div class="footer__bottom">
+            <div class="footer__copy">RicciDecor &copy; 2019 | <span
+                    class="footer__policy">Политика конфиденциальности</span></div>
+            <div class="footer__social">
+                <svg width="24" height="24" class="footer__social-icon">
+                    <use xlink:href="#instagram" class="footer__icon"/>
+                </svg>
+                <svg width="24" height="24" class="footer__social-icon">
+                    <use xlink:href="#facebook" class="footer__icon"/>
+                </svg>
+            </div>
+        </div>
+    </footer>
 </div>
 
 
