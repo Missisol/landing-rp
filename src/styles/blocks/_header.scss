@@ -89,9 +89,19 @@
     }
 
     &__side-menu {
-      font-size: 18px;
       line-height: 21px;
       margin-bottom: 70px;
+    }
+
+    &__link_side,
+    &__side-phone,
+    &__email {
+      font-size: 18px;
+      user-select: none;
+    }
+
+    &__side-phone {
+      color: $light-text-color;
     }
 
     &__email {

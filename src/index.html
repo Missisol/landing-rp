@@ -36,7 +36,7 @@
     <div class="content">
         <div class="header-wrap">
             <header class="header container">
-                <img src="assets/images/header/logo.svg" alt="logo" class="header__logo">
+                <img itemprop="logo" src="assets/images/header/logo.svg" alt="logo" class="header__logo">
                 <nav>
                     <ul class="header__menu">
                         <li class="header__link-wrap"><a href="#advantages" class="header__link anchor">Преимущества</a>
@@ -47,13 +47,15 @@
                         <li class="header__link-wrap"><a href="#contacts" class="header__link anchor">Контакты</a></li>
                     </ul>
                 </nav>
-                <div class="header__phone">8 800 550-36-56</div>
+                <div  class="header__phone">8 800 550-36-56</div>
                 <img id="menu-icon" class="header__menu-icon" src="assets/images/header/menu.svg" alt="menu">
             </header>
             <div id="overlay" class="overlay invisible"></div>
             <div id="sidebar" class="header__sidebar">
                 <nav>
                     <ul class="header__side-menu">
+                        <li class="header__link-wrap"><a href="#" itemprop="url"
+                                                         class="header__link header__link_side">О компании</a>
                         <li class="header__link-wrap"><a href="#advantages"
                                                          class="header__link header__link_side anchor">Преимущества</a>
                         </li>
@@ -79,9 +81,9 @@
         </div>
         <section class="first">
             <div class="first__content container">
-                <h1 class="first__title">
+                <h2 class="first__title">
                     Изысканная мебель для оснащения зоны отдыха заведения
-                </h1>
+                </h2>
                 <h4 class="first__subtitle">
                     Стоимость для партнеров ниже рыночной, так же вы будете
                     получать партнерское вознаграждение от суммы заказа.
@@ -132,7 +134,7 @@
             <div class="advantages__absolute advantages__absolute_second"></div>
             <div class="advantages__item-wrap advantages__item-wrap_second container">
                 <section class="advantages__item advantages__item_second">
-                    <h1 class="advantages__title">Брендирование</h1>
+                    <h2 class="advantages__title">Брендирование</h2>
                     <div class="advantages__text">
                         Наша компания предлагает вам услуги по
                         брендированию. Многочисленными исследованиями доказано, что
@@ -144,7 +146,7 @@
             <div class="advantages__absolute advantages__absolute_third"></div>
             <div class="advantages__item-wrap advantages__item-wrap_third container">
                 <section class="advantages__item advantages__item_third">
-                    <h1 class="advantages__title">Ассортимент</h1>
+                    <h2 class="advantages__title">Ассортимент</h2>
                     <div class="advantages__text">
                         Уличные ткани могут быть очень яркими или спокойными, с фактурой
                         или гладкими, однотонными или с рисунком. У нас большой выбор.
@@ -155,7 +157,7 @@
             </div>
         </div>
         <div id="gallery" class="instagram container">
-            <h1 class="instagram__title">Instagram</h1>
+            <h2 class="instagram__title">Instagram</h2>
             <div class="instagram__wrap">
                 <div class="instagram__item">
                     <img src="assets/images/instagram/insta-1.jpg" alt="instagram-1" class="instagram__image">
@@ -187,7 +189,7 @@
         <section id="partner" class="communication">
             <img src="assets/images/communication/heater.png" alt="heater" class="communication__image">
             <div class="communication__form-container container">
-                <h1 class="communication__title">Начать сотрудничество</h1>
+                <h2 class="communication__title">Начать сотрудничество</h2>
                 <div class="communication__text">
                     Оставьте свои контактные данные и мы ответим на любые ваши вопросы
                 </div>
@@ -226,14 +228,14 @@
     </div>
     <footer id="contacts" class="footer container">
         <div class="footer__top">
-            <h2 class="footer__phone">8-800-550-36-56</h2>
-            <h2 class="footer__email">info@ricciresort.ru</h2>
-            <div class="footer__address">
+            <h2 itemprop="telephone" class="footer__phone">8-800-550-36-56</h2>
+            <h2 itemprop="email" class="footer__email">info@ricciresort.ru</h2>
+            <div itemprop="address" class="footer__address">
                 Краснодар, ул. Красных Партизан, дом 218
             </div>
         </div>
         <div class="footer__bottom">
-            <div class="footer__copy footer__copy">RicciDecor &copy; 2019 | <span
+            <div class="footer__copy footer__copy"><span itemprop="name">RicciResort</span> &copy; 2019 | <span
                     class="footer__policy">Политика конфиденциальности</span>
             </div>
             <div class="footer__social">
