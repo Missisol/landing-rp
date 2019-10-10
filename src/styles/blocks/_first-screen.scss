@@ -6,8 +6,6 @@
 
   &__content {
     height: 100%;
-    padding: 8em 0 11em;
-    //padding: 130px 0 190px;
     color: $text-white-color;
     display: flex;
     flex-direction: column;
@@ -33,16 +31,26 @@
 @include desktop() {
   .first {
     height: 36.25em;
+
+    &__content {
+      padding: 8em 0 11em;
+    }
   }
 }
 
 @include tablet() {
-  .container-tablet  {
-    width: 580px;
-  }
-
   .first {
     height: 40em;
-  }
 
+    &__content {
+      padding: 6.25em 0 10.4em;
+      align-items: center;
+    }
+
+    &__title,
+    &__subtitle {
+      text-align: center;
+      min-width: 82%;
+    }
+  }
 }

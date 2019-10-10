@@ -1,29 +1,27 @@
 @import '../partials/mixins';
 
-
 .footer {
-  height: 13.5em;
 
   &__top {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 3.6em 0 2.5em;
+    //padding: 3.6em 0 2.5em;
     border-bottom: 1px solid $footer-border-color;
   }
 
   &__phone {
-    @include _h2;
+    //@include _h2;
   }
 
   &__email {
-    @include _h2;
+    //@include _h2;
     color: $icon-blue-color;
   }
 
   &__address {
     @include light-text;
-    flex-basis: 11.2em;
+    //flex-basis: 11.2em;
   }
 
   &__copy {
@@ -39,7 +37,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-top: $margin-step * 2;
+    //padding: $margin-step * 2 0 1.75em;
   }
 
   &__social {
@@ -56,5 +54,67 @@
 
   &__icon {
     fill: $icon-base-grey-color;
+  }
+}
+
+@include desktop() {
+  .footer {
+
+    &__top {
+      padding: 3.6em 0 2.5em;
+    }
+
+    &__phone {
+      @include _h2;
+    }
+
+    &__email {
+      @include _h2;
+    }
+
+    &__address {
+      flex-basis: 11.2em;
+    }
+
+    &__bottom {
+      padding: $margin-step * 2 0 1.75em;
+    }
+
+    &__social-icon {
+      width: 24px;
+      height: 24px;
+      margin-left: 16px;
+    }
+  }
+}
+
+@include tablet() {
+  .footer {
+
+    &__top {
+      flex-direction: column;
+      padding: $padding-top-tablet 0 $padding-top-tablet / 2;
+    }
+
+    &__phone,
+    &__email {
+      @include _h3;
+      margin-bottom: 1em;
+    }
+
+    &__bottom {
+      flex-direction: column-reverse;
+      padding: $padding-top-tablet / 2 0;
+    }
+
+    &__social {
+      margin-bottom: $padding-top-tablet;
+    }
+
+    &__social-icon {
+      width: 40px;
+      height: 40px;
+      margin-left: 16px;
+    }
   }
 }

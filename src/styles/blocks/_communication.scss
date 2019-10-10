@@ -1,8 +1,6 @@
 @import '../partials/mixins';
 
 .communication {
-  position: relative;
-  height: 32.5em;
   background: $form-background-color;
 
   &__form-container {
@@ -10,24 +8,15 @@
     padding: 4em 0 5em;
   }
 
-  &__image {
-    position: absolute;
-    bottom: 0;
-    right: 20%;
-  }
-
   &__title {
-    @include _h1-light;
-    margin-bottom: $margin-step * 2;
+    color: $header-grey-color;
   }
 
   &__text {
     @include base-text;
-    margin-bottom: $margin-step * 2;
   }
 
   &__form {
-    width: 50%;
     display: flex;
     flex-direction: column;
     color: $light-text-color;
@@ -41,7 +30,6 @@
   &__input {
     border: none;
     background: $form-background-color;
-    padding: 1.2em 0.75em 0.5em 0;
 
     &_checkbox {
       display: none;
@@ -53,13 +41,11 @@
   }
 
   &__label {
-    width: 75%;
     border-bottom: 1px solid $input-border-color;
   }
 
   &__label-checkbox {
     position: relative;
-    margin: 1.5em 0 2em 2.5em;
     display: inline-block;
   }
 
@@ -69,11 +55,9 @@
     width: 24px;
     height: 24px;
     border: 1px solid $input-border-color;
-    left: -40px;
   }
 
   &__wrap {
-    width: 84%;
     display: flex;
     justify-content: space-between;
   }
@@ -81,12 +65,11 @@
   &__button {
     @include btn;
     outline: none;
-    margin-right: $margin-step * 2;
   }
 
   &__send {
-    width: 80%;
     font-size: $mini-font-size;
+    line-height: 18px;
     color: $light-text-color;
   }
 }
@@ -97,4 +80,117 @@
   text-align: center;
   padding-left: 4px;
   color: $light-text-color;
+}
+
+@include desktop() {
+  .communication {
+    position: relative;
+    height: 32.5em;
+
+    &__form-container {
+      padding: 4em 0 5em;
+    }
+
+    &__image {
+      position: absolute;
+      bottom: 0;
+      right: 18%;
+    }
+
+    &__title {
+      @include _h1-light;
+      margin-bottom: $margin-step;
+    }
+
+    &__form {
+      width: 50%;
+    }
+
+    &__input {
+      padding: 1.2em 0.75em 0.5em 0;
+    }
+
+    &__label {
+      width: 75%;
+    }
+
+    &__label-checkbox {
+      margin: 1.5em 0 2em 2.5em;
+    }
+
+    &__label-checkbox:before {
+      left: -40px;
+    }
+
+    &__wrap {
+      width: 84%;
+    }
+
+    &__button {
+      margin-right: $margin-step * 2;
+    }
+
+    &__send {
+      width: 80%;
+    }
+  }
+}
+
+@include tablet() {
+  .communication {
+
+    &__form-container {
+      padding: 3em 7em 3.5em;
+    }
+
+    &__image {
+      display: none
+    }
+
+    &__title {
+      @include _h2-light;
+      margin-bottom: $margin-step;
+    }
+
+    &__text {
+      margin-bottom: $margin-step * 2;
+    }
+
+    &__title,
+    &__text {
+      text-align: center;
+    }
+
+    &__form {
+      width: 100%;
+    }
+
+    &__input {
+      padding: 1.2em 0.75em 0.5em 0;
+    }
+
+    &__label-checkbox {
+      padding-left: 1.75em;
+      margin: 1.5em 0 1.5em 1.5em;
+    }
+
+    &__label-checkbox:before {
+      left: -23px;
+      top: 10px;
+    }
+
+    &__wrap {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &__button {
+      margin-bottom: $margin-step;
+    }
+
+    &__send {
+      text-align: center;
+      width: 80%;
+    }
+  }
 }

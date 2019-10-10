@@ -1,15 +1,13 @@
 @import '../partials/mixins';
 
 .cooperate {
-  height: 28em;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  align-items: flex-start;
-  padding-top: 6em;
 
   &__item {
-    flex-basis: 30%;
+    display: flex;
+    flex-direction: column;
   }
 
   &__icon {
@@ -23,5 +21,32 @@
 
   &__text {
     @include light-text;
+  }
+}
+
+@include desktop() {
+  .cooperate {
+    padding: 6em 0;
+
+    &__item {
+      flex-basis: 30%;
+      align-items: flex-start;
+    }
+  }
+}
+
+@include tablet() {
+  .cooperate {
+    padding: $padding-top-tablet 0 $padding-bottom-tablet - $margin-step * 2;
+
+    &__item {
+      flex-basis: 47%;
+      text-align: center;
+      margin-bottom: $margin-step * 2;
+
+      &_last {
+        margin-left: 30%;
+      }
+    }
   }
 }

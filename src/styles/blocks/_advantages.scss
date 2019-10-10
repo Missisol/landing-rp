@@ -1,15 +1,11 @@
 @import '../partials/mixins';
 
-$height-desktop: 105em;
-
 .advantages {
   position: relative;
-  height: $height-desktop;
 
   &__absolute {
     position: absolute;
     z-index: -10;
-    height: $height-desktop / 3;
     width: 50%;
 
     &_first {
@@ -20,14 +16,12 @@ $height-desktop: 105em;
     }
 
     &_second {
-      top: $height-desktop / 3;
       right: 50%;
       background: url(../assets/images/advantages/adv-2.jpg) no-repeat;
       background-size: cover;
     }
 
     &_third {
-      top: $height-desktop * 2/ 3;
       left: 50%;
       background: url(../assets/images/advantages/adv-3.jpg) no-repeat;
       background-size: cover;
@@ -35,7 +29,6 @@ $height-desktop: 105em;
   }
 
   &__item-wrap {
-    height: $height-desktop / 3;
     display: flex;
 
     &_second {
@@ -49,15 +42,9 @@ $height-desktop: 105em;
     align-items: flex-start;
     height: 100%;
     width: 50%;
-    padding: 10em 7em 9em 0;
-
-    &_second {
-      padding: 10em 7em 9em;
-    }
   }
 
   &__title {
-    @include _h1-light;
     margin-bottom: $margin-step * 2;
   }
 
@@ -68,5 +55,75 @@ $height-desktop: 105em;
 
   &__button {
     @include btn;
+  }
+}
+
+@include desktop() {
+  .advantages {
+
+    &__absolute {
+      height: $base-height-desktop;
+
+      &_second {
+        top: $base-height-desktop;
+      }
+
+      &_third {
+        top: $base-height-desktop * 2;
+      }
+    }
+
+    &__item-wrap {
+      height: $base-height-desktop;
+    }
+
+    &__item {
+      padding: 10em 7em 9em 0;
+
+      &_second {
+        padding: 10em 7em 9em;
+      }
+    }
+
+    &__title {
+      @include _h1-light;
+      margin-bottom: $margin-step * 2;
+    }
+  }
+}
+
+@include tablet() {
+  .advantages {
+
+    &__absolute {
+      height: $base-height-tablet;
+
+      &_second {
+        top: $base-height-tablet-plus;
+      }
+
+      &_third {
+        top: $base-height-tablet-plus * 2;
+      }
+    }
+
+    &__item-wrap {
+      height: $base-height-tablet-plus;
+    }
+
+    &__item {
+      align-items: center;
+      text-align: center;
+      padding-right: 1.25em;
+
+      &_second {
+        padding: 0 0 0 1.25em;
+      }
+    }
+
+    &__title {
+      @include _h2-light;
+      margin-bottom: $margin-step;
+    }
   }
 }

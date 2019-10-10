@@ -1,17 +1,15 @@
 @import '../partials/mixins';
 
 .instagram {
-  height: 36em;
-  padding: 6em 0 8.5em;
 
   &__wrap {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
   }
 
   &__item {
     position: relative;
-    width: 23%;
   }
 
   &__title {
@@ -22,7 +20,44 @@
 
   &__icon {
     position: absolute;
-    bottom: $margin-step;
-    right: $margin-step;
+  }
+}
+
+@include desktop() {
+  .instagram {
+    padding: 6em 0 8.5em;
+
+    &__item {
+      min-width: 23%;
+    }
+
+    &__image {
+      width: $image-width-desktop;
+    }
+
+    &__icon {
+      bottom: $margin-step;
+      right: $margin-step;
+    }
+  }
+}
+
+@include tablet() {
+  .instagram {
+    padding: 3.125em 0 3.75em;
+
+    &__item {
+      min-width: 23%;
+      margin-bottom: $margin-step ;
+    }
+
+    &__image {
+      width: $image-width-tablet;
+    }
+
+    &__icon {
+      bottom: $margin-step * 2;
+      right: $margin-step;
+    }
   }
 }
