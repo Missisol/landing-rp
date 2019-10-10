@@ -4,9 +4,6 @@
   position: relative;
 
   &__absolute {
-    position: absolute;
-    z-index: -10;
-    width: 50%;
 
     &_first {
       top: 0;
@@ -41,15 +38,16 @@
     flex-direction: column;
     align-items: flex-start;
     height: 100%;
-    width: 50%;
   }
 
   &__title {
+    color: $header-grey-color;
     margin-bottom: $margin-step * 2;
   }
 
   &__text {
     @include base-text;
+    color: $light-text-color;
     margin-bottom: $margin-step * 2;
   }
 
@@ -62,6 +60,9 @@
   .advantages {
 
     &__absolute {
+      position: absolute;
+      z-index: -10;
+      width: 50%;
       height: $base-height-desktop;
 
       &_second {
@@ -78,6 +79,7 @@
     }
 
     &__item {
+      width: 50%;
       padding: 10em 7em 9em 0;
 
       &_second {
@@ -96,6 +98,9 @@
   .advantages {
 
     &__absolute {
+      position: absolute;
+      z-index: -10;
+      width: 50%;
       height: $base-height-tablet;
 
       &_second {
@@ -112,6 +117,7 @@
     }
 
     &__item {
+      width: 50%;
       align-items: center;
       text-align: center;
       padding-right: 1.25em;
@@ -127,3 +133,25 @@
     }
   }
 }
+
+@include phone() {
+  .advantages {
+
+    &__absolute {
+      position: static;
+      height: $base-height-tablet;
+    }
+
+    &__item {
+      align-items: center;
+      text-align: center;
+      padding: $margin-step * 2 0 $margin-mobile-forty;
+    }
+
+    &__title {
+      @include _h1-mobile-light;
+      margin-bottom: $margin-step;
+    }
+  }
+}
+

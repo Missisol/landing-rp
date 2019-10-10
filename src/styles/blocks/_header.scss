@@ -1,8 +1,7 @@
 @import '../partials/mixins';
 
-$header-height: 3.75em;
-
 .header {
+  position: relative;
   height: $header-height;
   display: flex;
   justify-content: space-between;
@@ -36,6 +35,11 @@ $header-height: 3.75em;
       padding-left: 2.3em;
       padding-right: 2.3em;
     }
+
+    &__menu-icon,
+    &__sidebar {
+      display: none;
+    }
   }
 }
 
@@ -48,6 +52,62 @@ $header-height: 3.75em;
 
     &__link-wrap {
       padding-left: 2.2em;
+    }
+
+    &__menu-icon,
+    &__sidebar {
+      display: none;
+    }
+  }
+}
+
+@include phone() {
+  .header-wrap {
+    position: fixed;
+    z-index: 300;
+    width: 100%;
+    background: #ffffff;
+  }
+
+  .header {
+
+    &__phone,
+    &__menu {
+      display: none;
+    }
+
+    &__sidebar {
+      position: absolute;
+      top: $header-height;
+      right: -100vw;
+      background: #ffffff;
+      height: 100vh;
+      padding-left: 30px;
+      z-index: 50;
+      width: 60vw;
+      transition: right 0.5s ease-out;
+    }
+
+    &__side-menu {
+      font-size: 18px;
+      line-height: 21px;
+      margin-bottom: 70px;
+    }
+
+    &__email {
+      color: $icon-blue-color;
+    }
+
+    &__side-phone,
+    &__email {
+      margin-bottom: $margin-step-sixteen;
+    }
+
+    &__social-icon {
+      width: 29px;
+      height: 29px;
+      margin-left: 0;
+      margin-right: $margin-step-sixteen;
     }
   }
 }

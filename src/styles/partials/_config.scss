@@ -90,16 +90,18 @@ textarea {
 
 .overlay {
   position: absolute;
-  z-index: 400;
-  background: rgba(0, 0, 0, 0.3);
+  z-index: 20;
+  background: #000000;
+  opacity: 0.6;
   width: 100vw;
   height: 100vh;
   left: 0;
-  transition: 0.5s;
+  top: $header-height;
+  transition: opacity 0.5s linear 0.5s;
 }
 
 .invisible {
-  display: none;
+display: none
 }
 
 svg path{

@@ -16,6 +16,7 @@
 
   &__title {
     @include _h3;
+    color: $header-grey-color;
     margin-bottom: $margin-step;
   }
 
@@ -47,6 +48,23 @@
       &_last {
         margin-left: 30%;
       }
+    }
+
+    &__icon {
+      width: 64px;
+      align-self: center;
+    }
+  }
+}
+
+@include phone() {
+  .cooperate {
+    padding: $margin-mobile-forty 0;
+
+    &__item {
+      flex-basis: 94%;
+      text-align: center;
+      margin-bottom: $margin-mobile-forty;
     }
 
     &__icon {

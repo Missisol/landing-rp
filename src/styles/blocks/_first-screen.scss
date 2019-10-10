@@ -30,17 +30,23 @@
 
 @include desktop() {
   .first {
-    height: 36.25em;
 
     &__content {
       padding: 8em 0 11em;
+    }
+
+    &__title {
+      margin-bottom: $margin-step-sixteen;
+    }
+
+    &__subtitle {
+      margin-bottom: $margin-step * 2;
     }
   }
 }
 
 @include tablet() {
   .first {
-    height: 40em;
 
     &__content {
       padding: 6.25em 0 10.4em;
@@ -51,6 +57,42 @@
     &__subtitle {
       text-align: center;
       min-width: 82%;
+    }
+
+    &__title {
+      margin-bottom: $margin-step * 2;
+    }
+
+    &__subtitle {
+      margin-bottom: $padding-top-tablet;
+    }
+  }
+}
+
+@include phone() {
+  .first {
+    height: 30em;
+    margin-top: $header-height;
+
+    &__content {
+      padding: $margin-step-sixteen * 2 0 $margin-step * 4;
+      align-items: center;
+    }
+
+    &__title,
+    &__subtitle {
+      text-align: center;
+      min-width: $phone-container;
+    }
+
+    &__title {
+      @include _h1-mobile;
+      margin-bottom: $margin-step-sixteen;
+    }
+
+    &__subtitle {
+      @include _h3-mobile;
+      margin-bottom: $margin-step * 2;
     }
   }
 }

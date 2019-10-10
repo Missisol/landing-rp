@@ -17,6 +17,7 @@
   }
 
   &__form {
+    position: relative;
     display: flex;
     flex-direction: column;
     color: $light-text-color;
@@ -42,6 +43,10 @@
 
   &__label {
     border-bottom: 1px solid $input-border-color;
+  }
+
+  &__label.error {
+    border-bottom: 1px solid $error-color;
   }
 
   &__label-checkbox {
@@ -72,6 +77,14 @@
     line-height: 18px;
     color: $light-text-color;
   }
+
+  &__error {
+    position: absolute;
+    font-size: 14px;
+    font-weight: 300;
+    color: $error-color;
+  }
+
 }
 
 .communication__input_checkbox:checked + label.communication__label-checkbox:before {
@@ -94,7 +107,7 @@
     &__image {
       position: absolute;
       bottom: 0;
-      right: 18%;
+      right: 10%;
     }
 
     &__title {
@@ -124,6 +137,7 @@
 
     &__wrap {
       width: 84%;
+      align-items: center;
     }
 
     &__button {
@@ -132,6 +146,18 @@
 
     &__send {
       width: 80%;
+    }
+
+    &__field-name {
+      top: 50px;
+    }
+
+    &__field-email {
+      top: 104px;
+    }
+
+    &__field-phone {
+      top: 159px;
     }
   }
 }
@@ -180,17 +206,95 @@
     }
 
     &__wrap {
-      flex-direction: column;
+      flex-direction: column-reverse;
       align-items: center;
-    }
-
-    &__button {
-      margin-bottom: $margin-step;
     }
 
     &__send {
       text-align: center;
       width: 80%;
+      margin-bottom: $margin-step;
+    }
+
+    &__field-name {
+      top: 50px;
+    }
+
+    &__field-email {
+      top: 104px;
+    }
+
+    &__field-phone {
+      top: 159px;
+    }
+  }
+}
+
+@include phone() {
+  .communication {
+
+    &__form-container {
+      padding: 1.5em 0 1.5em;
+    }
+
+    &__image {
+      display: none
+    }
+
+    &__title {
+      @include _h1-mobile-light;
+      line-height: 35px;
+      margin-bottom: $margin-step;
+    }
+
+    &__text {
+      margin-bottom: $margin-step * 2;
+    }
+
+    &__title,
+    &__text {
+      text-align: center;
+    }
+
+    &__form {
+      width: 100%;
+    }
+
+    &__input {
+      padding: 1.2em 0.75em 0.5em 0;
+    }
+
+    &__label-checkbox {
+      padding-left: 1.75em;
+      margin: 1.5em 0 1.5em 1.5em;
+    }
+
+    &__label-checkbox:before {
+      left: -23px;
+      top: 10px;
+    }
+
+    &__wrap {
+      flex-direction: column-reverse;
+      align-items: center;
+    }
+
+    &__send {
+      text-align: center;
+      width: 80%;
+      margin-bottom: $margin-step;
+    }
+
+    &__field-name {
+      top: 50px;
+    }
+
+    &__field-email {
+      top: 104px;
+    }
+
+    &__field-phone {
+      top: 159px;
     }
   }
 }

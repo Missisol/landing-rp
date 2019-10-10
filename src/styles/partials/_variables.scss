@@ -59,13 +59,13 @@ $h3-line-height: 28px;
 $h4-line-height: 35px;
 
 // Mobile font sizes
-$h1-mobile-font-size: 34px;
+$h1-mobile-font-size: 30px;
 $h2-mobile-font-size: 24px;
 $h3-mobile-font-size: 20px;
 $mobile-menu-font-size: 20px;
 
 // Mobile line heights
-$h1-mobile-line-height: 45px;
+$h1-mobile-line-height: 48px;
 $h2-mobile-line-height: 28px;
 $h3-mobile-line-height: 30px;
 $base-mobile-line-height: 16px;
@@ -73,12 +73,12 @@ $base-mobile-line-height: 16px;
 //Breakpoints
 $desktop-width: 1440px;
 $tablet-width: 768px;
-$phone-width: 375px;
+$phone-width: 320px;
 
 //Containers
 $desktop-container: 1170px;
 $tablet-container: 700px;
-$phone-container: 343px;
+$phone-container: 308px;
 
 //Main colors
 $base-blue-color: #66C8DB;
@@ -101,11 +101,17 @@ $icon-hover-grey-color: #282828;
 $form-background-color: #E6F4F7;
 $input-border-color: rgba(108, 108, 108, 0.5);
 $footer-border-color: #DFE8ED;
+$error-color: #CA2F03;
 
 //Indents
 $margin-step: 12px;
 $padding-top-tablet: 60px;
 $padding-bottom-tablet: 90px;
+$margin-step-sixteen: 16px;
+$margin-mobile-forty: 40px;
+
+//Header block variables
+$header-height: 3.75em;
 
 //Advantages block variables
 $base-height-desktop: 560px;
@@ -115,6 +121,6 @@ $base-height-tablet-plus: 330px;
 //Instagram block variables
 $image-width-desktop: 270px;
 $image-width-tablet: 340px;
-$image-width-phone: 163px;
+$image-width-phone: 156px;
 
 

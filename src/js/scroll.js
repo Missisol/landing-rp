@@ -67,6 +67,7 @@ for (let menuAnchor of menuAnchors) {
 
         const target = e.target;
         const id = target.getAttribute('href');
+        console.log('target', target, );
 
         if (id !== '#') {
             smoothScroll(id);

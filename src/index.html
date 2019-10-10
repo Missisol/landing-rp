@@ -28,23 +28,55 @@
     <svg display="none">
         <symbol id="facebook" viewBox="0 0 29 29" xmlns="http://www.w3.org/2000/svg">
             <g opacity="0.5">
-                <path d="M5.29523 0C2.3619 0 0 2.3619 0 5.29523V23.7048C0 26.6381 2.3619 29 5.29523 29H15.2731V17.6628H12.2752V13.5811H15.2731V10.0938C15.2731 7.35405 17.0443 4.83848 21.1247 4.83848C22.7768 4.83848 23.9984 4.99708 23.9984 4.99708L23.9023 8.80878C23.9023 8.80878 22.6564 8.79701 21.2969 8.79701C19.8254 8.79701 19.5895 9.47497 19.5895 10.6005V13.5811H24.0192L23.8262 17.6629H19.5895V29.0001H23.7048C26.6381 29.0001 29 26.6382 29 23.7048V5.29526C29 2.36193 26.6381 2.9e-05 23.7048 2.9e-05H5.2952L5.29523 0Z" fill="#6E7174"/>
+                <path d="M5.29523 0C2.3619 0 0 2.3619 0 5.29523V23.7048C0 26.6381 2.3619 29 5.29523 29H15.2731V17.6628H12.2752V13.5811H15.2731V10.0938C15.2731 7.35405 17.0443 4.83848 21.1247 4.83848C22.7768 4.83848 23.9984 4.99708 23.9984 4.99708L23.9023 8.80878C23.9023 8.80878 22.6564 8.79701 21.2969 8.79701C19.8254 8.79701 19.5895 9.47497 19.5895 10.6005V13.5811H24.0192L23.8262 17.6629H19.5895V29.0001H23.7048C26.6381 29.0001 29 26.6382 29 23.7048V5.29526C29 2.36193 26.6381 2.9e-05 23.7048 2.9e-05H5.2952L5.29523 0Z"
+                      fill="#6E7174"/>
             </g>
         </symbol>
     </svg>
     <div class="content">
-        <header class="header container">
-            <img src="assets/images/header/logo.svg" alt="logo" class="header__logo">
-            <nav>
-                <ul class="header__menu">
-                    <li class="header__link-wrap"><a href="#" class="header__link">Преимущества</a></li>
-                    <li class="header__link-wrap"><a href="#" class="header__link">Галерея</a></li>
-                    <li class="header__link-wrap"><a href="#" class="header__link">Стать партнером</a></li>
-                    <li class="header__link-wrap"><a href="#" class="header__link">Контакты</a></li>
-                </ul>
-            </nav>
-            <div class="header__phone">8 800 550-36-56</div>
-        </header>
+        <div class="header-wrap">
+            <header class="header container">
+                <img src="assets/images/header/logo.svg" alt="logo" class="header__logo">
+                <nav>
+                    <ul class="header__menu">
+                        <li class="header__link-wrap"><a href="#advantages" class="header__link anchor">Преимущества</a>
+                        </li>
+                        <li class="header__link-wrap"><a href="#gallery" class="header__link anchor">Галерея</a></li>
+                        <li class="header__link-wrap"><a href="#partner" class="header__link anchor">Стать партнером</a>
+                        </li>
+                        <li class="header__link-wrap"><a href="#contacts" class="header__link anchor">Контакты</a></li>
+                    </ul>
+                </nav>
+                <div class="header__phone">8 800 550-36-56</div>
+                <img id="menu-icon" class="header__menu-icon" src="assets/images/header/menu.svg" alt="menu">
+            </header>
+            <div id="overlay" class="overlay invisible"></div>
+            <div id="sidebar" class="header__sidebar">
+                <nav>
+                    <ul class="header__side-menu">
+                        <li class="header__link-wrap"><a href="#advantages"
+                                                         class="header__link header__link_side anchor">Преимущества</a>
+                        </li>
+                        <li class="header__link-wrap"><a href="#gallery" class="header__link header__link_side anchor">Галерея</a>
+                        </li>
+                        <li class="header__link-wrap"><a href="#partner" class="header__link header__link_side anchor">Стать
+                            партнером</a></li>
+                        <li class="header__link-wrap"><a href="#contacts" class="header__link header__link_side anchor">Контакты</a>
+                        </li>
+                    </ul>
+                    <div class="header__side-phone">8 800 550-36-56</div>
+                    <div class="header__email">info@ricciresort.ru</div>
+                    <div class="footer__social">
+                        <svg class="header__social-icon">
+                            <use xlink:href="#instagram" class="footer__icon"/>
+                        </svg>
+                        <svg class="header__social-icon">
+                            <use xlink:href="#facebook" class="footer__icon"/>
+                        </svg>
+                    </div>
+                </nav>
+            </div>
+        </div>
         <section class="first">
             <div class="first__content container">
                 <h1 class="first__title">
@@ -54,7 +86,7 @@
                     Стоимость для партнеров ниже рыночной, так же вы будете
                     получать партнерское вознаграждение от суммы заказа.
                 </h4>
-                <a class="first__button">Стать партнером</a>
+                <a  href="#partner" class="first__button anchor">Стать партнером</a>
             </div>
         </section>
         <section class="cooperate container">
@@ -84,10 +116,8 @@
                 </div>
             </div>
         </section>
-        <div class="advantages">
+        <div id="advantages" class="advantages">
             <div class="advantages__absolute advantages__absolute_first"></div>
-            <div class="advantages__absolute advantages__absolute_second"></div>
-            <div class="advantages__absolute advantages__absolute_third"></div>
             <div class="advantages__item-wrap advantages__item-wrap_first container">
                 <section class="advantages__item advantages__item_first">
                     <h1 class="advantages__title">Сотрудничество</h1>
@@ -99,6 +129,7 @@
                     <a href="#" class="advantages__button">Хочу сотрудничать</a>
                 </section>
             </div>
+            <div class="advantages__absolute advantages__absolute_second"></div>
             <div class="advantages__item-wrap advantages__item-wrap_second container">
                 <section class="advantages__item advantages__item_second">
                     <h1 class="advantages__title">Брендирование</h1>
@@ -110,6 +141,7 @@
                     <a href="#" class="advantages__button">Узнать больше</a>
                 </section>
             </div>
+            <div class="advantages__absolute advantages__absolute_third"></div>
             <div class="advantages__item-wrap advantages__item-wrap_third container">
                 <section class="advantages__item advantages__item_third">
                     <h1 class="advantages__title">Ассортимент</h1>
@@ -122,7 +154,7 @@
                 </section>
             </div>
         </div>
-        <div class="instagram container">
+        <div id="gallery" class="instagram container">
             <h1 class="instagram__title">Instagram</h1>
             <div class="instagram__wrap">
                 <div class="instagram__item">
@@ -152,7 +184,7 @@
 
             </div>
         </div>
-        <section class="communication">
+        <section id="partner" class="communication">
             <img src="assets/images/communication/heater.png" alt="heater" class="communication__image">
             <div class="communication__form-container container">
                 <h1 class="communication__title">Начать сотрудничество</h1>
@@ -160,21 +192,21 @@
                     Оставьте свои контактные данные и мы ответим на любые ваши вопросы
                 </div>
                 <form action="#" method="POST" name="communication" class="communication__form">
-                    <label class="communication__label">
-                        <input type="text" name="username" autocomplete="off"
+                    <label class="communication__label name-label">
+                        <input type="text" name="name" autocomplete="off"
                                class="communication__input" placeholder="Как к вам обращаться?">
                     </label>
-                    <div class="communication__error communication__error_username"></div>
-                    <label class="communication__label">
+                    <div class="communication__error communication__field-name"></div>
+                    <label class="communication__label email-label">
                         <input type="text" name="email" autocomplete="off"
                                class="communication__input" placeholder="Электронная почта">
                     </label>
-                    <div class="communication__error communication__error_email"></div>
-                    <label class="communication__label">
+                    <div class="communication__error communication__field-email"></div>
+                    <label class="communication__label phone-label">
                         <input type="text" name="phone" autocomplete="off"
-                               class="communication__input" placeholder="Телефон">
+                               class="communication__input" placeholder="Телефон" id="input-phone">
                     </label>
-                    <div class="communication__error communication__error_phone"></div>
+                    <div class="communication__error communication__field-phone"></div>
                     <input type="checkbox" name="check" value="1"
                            class="communication__input communication__input_checkbox"
                            id="checkbox">
@@ -182,17 +214,17 @@
                         <span class="communication__text-checkbox">Хочу получить специальный прайс и каталог для партнеров</span>
                     </label>
                     <div class="communication__wrap">
-                        <div type="submit" class="communication__button">Отправить</div>
+                        <button type="submit" class="communication__button" id="submit">Отправить</button>
                         <a href="#" class="communication__send">
-                            Нажимая на кнопку «Отправить» вы соглашаетесь
-                            на обработку ваших <b>персональных данных</b>
+                            Нажимая на кнопку «Отправить», вы соглашаетесь
+                            на обработку <b>персональных данных</b>
                         </a>
                     </div>
                 </form>
             </div>
         </section>
     </div>
-    <footer class="footer container">
+    <footer id="contacts" class="footer container">
         <div class="footer__top">
             <h2 class="footer__phone">8-800-550-36-56</h2>
             <h2 class="footer__email">info@ricciresort.ru</h2>
@@ -208,7 +240,7 @@
                 <svg class="footer__social-icon">
                     <use xlink:href="#instagram" class="footer__icon"/>
                 </svg>
-                <svg width="24" height="24" class="footer__social-icon">
+                <svg class="footer__social-icon">
                     <use xlink:href="#facebook" class="footer__icon"/>
                 </svg>
             </div>
@@ -217,7 +249,7 @@
 </div>
 
 
-<!--    <script src="assets/libs/imask.min.js"></script>-->
-<!--<script src="js/bundle.min.js"></script>-->
+<script src="assets/libs/imask.min.js"></script>
+<script src="js/bundle.min.js"></script>
 </body>
 </html>
