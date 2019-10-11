@@ -52,6 +52,10 @@ textarea {
   outline: none;
 }
 
+a:link {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
 .big-wrap {
   min-height: 100%;
   display: flex;

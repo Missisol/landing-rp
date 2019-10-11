@@ -2,6 +2,7 @@
 
 .communication {
   background: $form-background-color;
+  user-select: none;
 
   &__form-container {
     height: 100%;
@@ -29,6 +30,7 @@
   }
 
   &__input {
+    width: 100%;
     border: none;
     background: $form-background-color;
 
@@ -57,8 +59,9 @@
   &__label-checkbox:before {
     content: '';
     position: absolute;
-    width: 24px;
+    width: 20px;
     height: 24px;
+    padding-left: 4px;
     border: 1px solid $input-border-color;
   }
 
@@ -84,7 +87,6 @@
     font-weight: 300;
     color: $error-color;
   }
-
 }
 
 .communication__input_checkbox:checked + label.communication__label-checkbox:before {

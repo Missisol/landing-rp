@@ -1,6 +1,7 @@
 @import '../partials/mixins';
 
 .footer {
+  user-select: none;
 
   &__top {
     display: flex;
@@ -107,6 +108,10 @@
       width: 40px;
       height: 40px;
       margin-left: 16px;
+
+      &_first {
+        margin-left: 0;
+      }
     }
   }
 }
